@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  digh-cwc-dona:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: test
+      args:
+        ARTIFACTORY_ACCESS_TOKEN:
+    tty: true
+    volumes:
+      - ../coverage:/usr/src/app/coverage

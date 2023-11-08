@@ -1,0 +1,56 @@
+@import './colors';
+
+.primary {
+  --lds-color-button-background: #{$theme-color-secondary};
+  --lds-color-button-background-hover: #{$theme-color-secondary-hover};
+  --lds-radius-button: #{$theme-radius-button};
+  --lds-color-button-focus-outline: #{$theme-color-dark-gray};
+  --lds-border-button-focus-outline-width: 3px;
+  --lds-color-button-foreground: #{$theme-color-tertiary};
+  --lds-color-button-foreground-hover: #{$theme-color-tertiary};
+  --lds-color-button-foreground-active: #{$theme-color-tertiary};
+  --lds-color-button-background-active: #{$theme-color-secondary-hover};
+  --lds-spacing-button-padding-top: 12px;
+  --lds-spacing-button-padding-bottom: 12px;
+}
+
+.secondary {
+  --lds-border-button-width: 2px;
+  --lds-radius-button: #{$theme-radius-button};
+  --lds-color-button-background: #{$theme-color-white};
+  --lds-color-button-border: #{$theme-color-tertiary};
+  --lds-color-button-foreground: #{$theme-color-tertiary};
+  --lds-color-button-foreground-hover: #{$theme-color-tertiary};
+  --lds-color-button-background-hover: #{$theme-color-light-gray};
+  --lds-color-button-foreground-active: #{$theme-color-tertiary};
+  --lds-color-button-border-hover: #{$theme-color-tertiary};
+  --lds-color-button-border-active: #{$theme-color-tertiary};
+  --lds-color-button-focus-shadow: #{$theme-color-dark-gray};
+  --lds-shadow-button-focus: 0 0 0 3px;
+  --lds-color-button-background-active: #{$theme-color-light-gray};
+  --lds-spacing-button-padding-top: 12px;
+  --lds-spacing-button-padding-bottom: 12px;
+}
+
+.empty {
+  --lds-border-button-width: 2px;
+  --lds-border-button-radius: 10px;
+  --lds-color-button-background: #{$theme-color-white};
+  --lds-color-button-border: #{$theme-color-darker-gray};
+  --lds-color-button-foreground: #{$theme-color-darker-gray};
+  --lds-typography-button-font-size: 18px;
+  --lds-typography-button-font-weight: 700;
+  --lds-typography-button-line-height: 24px;
+  --lds-color-button-foreground-hover: #{$theme-color-darker-gray};
+  --lds-color-button-background-hover: #{$theme-color-white};
+  --lds-color-button-foreground-active: #{$theme-color-darker-gray};
+  --lds-color-button-border-hover: #{$theme-color-darker-gray};
+  --lds-color-button-border-active: #{$theme-color-darker-gray};
+  --lds-color-button-focus-shadow: none;
+  --lds-shadow-button: none;
+  --lds-color-button-background-active: none;
+  --lds-spacing-button-padding-top: 12px;
+  --lds-spacing-button-padding-bottom: 12px;
+  --lds-spacing-button-padding-left: 24px;
+  --lds-spacing-button-padding-right: 24px;
+}

@@ -1,0 +1,29 @@
+name: Unit Test and Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag-and-push:
+        description: 'Set to true to tag and push the build.'
+        required: false
+        default: 'false'
+  push: # only run when pushed to develop or release, unless a PR is open
+    branches:
+      - 'develop'
+      - 'release/*'
+  pull_request:
+
+jobs:
+  #  unit-tests:
+  #    uses: EliLillyCo/DIGH_SHARED_ACTIONS/.github/workflows/docker_run_unit_tests_and_coverage_report.yml@main
+  #    secrets: inherit
+  #    with:
+  #      min-code-coverage: 80
+
+  deploy:
+    #    needs: [unit-tests]
+    uses: EliLillyCo/DIGH_SHARED_ACTIONS/.github/workflows/aws_ecs_deploy.yml@main
+    secrets: inherit
+    with:
+      service-name: digh-cwc-dona
+      tag-and-push: ${{ github.event.inputs.tag-and-push }}

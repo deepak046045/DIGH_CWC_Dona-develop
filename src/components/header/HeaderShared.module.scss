@@ -1,0 +1,116 @@
+@import '@/scss/abstracts/mixins';
+@import '@/scss/themes/colors';
+
+.background {
+  background-color: #{$theme-color-white};
+}
+
+.whiteBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 32px 16px;
+
+  @include ScreenSizeXXL() {
+    padding: 16px 0px;
+  }
+}
+
+.myProfileButton,
+.myProfileButtonActive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: underline;
+  border-radius: 25px;
+  text-transform: none;
+}
+
+.myProfileButton {
+  color: #502361;
+}
+
+.myProfileButtonActive {
+  color: #ffffff;
+  background-color: #c25400;
+}
+
+.myProfileButton:hover,
+.myProfileButton:focus {
+  background-color: #d6d9db;
+  text-decoration: underline;
+}
+
+.myProfileButton:focus {
+  box-shadow: 0 0 0 3px #757575;
+}
+
+.myProfileButtonActive:hover,
+.myProfileButtonActive:focus {
+  background-color: #c25400;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.signInButton,
+.signUpOutButton {
+  text-transform: none;
+  border-radius: 10px;
+  color: #502361;
+  border: 3px solid transparent;
+
+  /* Should be replaced with typography when LDS integrated */
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.signInButton {
+  border: 2px solid #502361;
+  color: #502361;
+}
+
+.signUpOutButton {
+  background-color: #ffc000;
+  align-self: center;
+}
+
+.signInButton:hover {
+  border: 2px solid #502361;
+  color: #502361;
+  background-color: #d6d9db;
+  text-decoration: none;
+}
+
+.signInButton:focus {
+  border: 2px solid #502361;
+  box-shadow: 0 0 0 3px #757575;
+  color: #502361;
+  text-decoration: none;
+}
+
+.signUpOutButton:hover {
+  background-color: #ffdf80;
+  text-decoration: none;
+}
+
+.signUpOutButton:focus {
+  background-color: #ffc000;
+  text-decoration: none;
+  border: 3px solid #757575;
+}
+
+.userWelcome {
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-self: center;
+
+  /* Should be replaced with typography when LDS integrated */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}

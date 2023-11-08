@@ -1,0 +1,19 @@
+@import '../abstracts/mixins';
+
+.primary {
+  --lds-spacing-alert-inline-margin-bottom: 0;
+  --lds-shadow-alert: none;
+  background-color: #424242;
+  color: #fff;
+
+  @include ScreenSizeSmall(true) {
+    --lds-spacing-alert-padding: 0.9rem 0;
+  }
+
+  @include ScreenSizeXXL(true) {
+    --lds-spacing-alert-padding: 0.7rem calc((100vw - 1300px) / 2);
+  }
+  .message {
+    font-weight: 400;
+  }
+}

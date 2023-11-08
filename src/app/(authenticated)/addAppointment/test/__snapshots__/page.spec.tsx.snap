@@ -1,0 +1,2204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddAppointments Page should render page 1`] = `
+<div>
+  <section
+    class="AddAppointment gutter__form"
+  >
+    <h1
+      class="AddAppointment__title"
+    >
+      Add Appointment
+    </h1>
+    <p
+      class="AddAppointment__text"
+    >
+      Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+    </p>
+    <form
+      action="#"
+      data-testid="add-appointment-form"
+    >
+      <div
+        class="AddAppointment__form_select_input"
+      >
+        <div
+          class="lds-select-wrapper"
+        >
+          <label
+            class="lds-form-label"
+            for="appointmentType-select-button"
+          >
+            TYPE OF APPOINTMENT
+          </label>
+          <div
+            class="lds-select-input-wrapper"
+          >
+            <input
+              id="appointmentType-select"
+              name="appointmentType"
+              type="hidden"
+              value=""
+            />
+            <button
+              aria-describedby="appointmentType-select-option-btn-0"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-invalid="false"
+              aria-required="false"
+              class="button-clear-style lds-select"
+              id="appointmentType-select-button"
+              tabindex="0"
+            >
+              <lds-icon
+                aria-hidden="true"
+                class="caret-down"
+                name="CaretDown"
+              />
+            </button>
+            <div
+              aria-hidden="true"
+              class="lds-select-options"
+              role="listbox"
+            >
+              <button
+                class="lds-button-clear-style lds-select-option selected"
+                data-option="appointmentType-select-option-btn-"
+                id="appointmentType-select-option-btn-0"
+                role="option"
+                tabindex="-1"
+              />
+              <button
+                class="lds-button-clear-style lds-select-option"
+                data-option="appointmentType-select-option-btn-infusion"
+                id="appointmentType-select-option-btn-1"
+                role="option"
+                tabindex="-1"
+              >
+                Infusion
+              </button>
+              <button
+                class="lds-button-clear-style lds-select-option"
+                data-option="appointmentType-select-option-btn-safetyMRI"
+                id="appointmentType-select-option-btn-2"
+                role="option"
+                tabindex="-1"
+              >
+                Safety MRI
+              </button>
+              <button
+                class="lds-button-clear-style lds-select-option"
+                data-option="appointmentType-select-option-btn-neurologist"
+                id="appointmentType-select-option-btn-3"
+                role="option"
+                tabindex="-1"
+              >
+                Neurologist
+              </button>
+              <button
+                class="lds-button-clear-style lds-select-option"
+                data-option="appointmentType-select-option-btn-generalDoctor"
+                id="appointmentType-select-option-btn-4"
+                role="option"
+                tabindex="-1"
+              >
+                General Doctor
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <fieldset
+        class="lds-checkbox-group"
+      >
+        <legend>
+          TYPE OF APPOINTMENT
+        </legend>
+        <div
+          class="AddAppointment__form_radio_inputs_landscape"
+        >
+          <label
+            class="lds-check-label"
+          >
+            <input
+              class="lds-radio"
+              id="infusion-radio-id"
+              name="appointmentType"
+              type="radio"
+              value="infusion"
+            />
+            Infusion
+          </label>
+          <label
+            class="lds-check-label"
+          >
+            <input
+              class="lds-radio"
+              id="safetyMRI-radio-id"
+              name="appointmentType"
+              type="radio"
+              value="safetyMRI"
+            />
+            Safety MRI
+          </label>
+          <label
+            class="lds-check-label"
+          >
+            <input
+              class="lds-radio"
+              id="neurologist-radio-id"
+              name="appointmentType"
+              type="radio"
+              value="neurologist"
+            />
+            Neurologist
+          </label>
+          <label
+            class="lds-check-label"
+          >
+            <input
+              class="lds-radio"
+              id="generalDoctor-radio-id"
+              name="appointmentType"
+              type="radio"
+              value="generalDoctor"
+            />
+            General Doctor
+          </label>
+        </div>
+      </fieldset>
+      <div
+        class="AddAppointment__form_text_input"
+      >
+        <label
+          class="lds-form-label"
+        >
+          ADDRESS
+          <input
+            aria-describedby="address-error"
+            class="lds-text-field"
+            id="address-id"
+            name="address"
+            type="text"
+            value=""
+          />
+        </label>
+      </div>
+      <div
+        class="AddAppointment__form_schedule"
+      >
+        <div
+          class="AddAppointment__form_schedule_date_picker "
+        >
+          <div
+            class="lds-datepicker-wrapper"
+          >
+            <div>
+              <label
+                class="lds-form-label"
+                for="scheduleDate-id"
+              >
+                DATE
+                <span
+                  class="lds-form-hint"
+                >
+                  Format: MM/DD/YYYY
+                </span>
+              </label>
+              <div
+                class="lds-datepicker-input-wrapper"
+              >
+                <input
+                  class="lds-text-field lds-datepicker-input"
+                  id="scheduleDate-id"
+                  inputmode="numeric"
+                  maxlength="10"
+                  placeholder="__/__/____"
+                  type="text"
+                  value=""
+                />
+                <button
+                  aria-label="Open calendar"
+                  class="lds-button icon-only"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-CalendarBlank-title-123456789 lds-icon-CalendarBlank-description-123456789"
+                    class="lds-icon icon-CalendarBlank inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-CalendarBlank-title-123456789"
+                    >
+                      CalendarBlank
+                    </title>
+                    <desc
+                      id="lds-icon-CalendarBlank-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              aria-describedby="scheduleDate-id-modalTitle"
+              aria-modal="true"
+              class="lds-card lds-calendar-popup"
+              role="dialog"
+            >
+              <span
+                class="sr-only"
+                id="scheduleDate-id-modalTitle"
+              >
+                Date selection calendar
+              </span>
+              <div
+                class="date-selection"
+              >
+                <button
+                  aria-label="Previous month"
+                  class="lds-button compact calendar-arrow icon-only"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-CaretLeft-title-123456789 lds-icon-CaretLeft-description-123456789"
+                    class="lds-icon icon-CaretLeft inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-CaretLeft-title-123456789"
+                    >
+                      CaretLeft
+                    </title>
+                    <desc
+                      id="lds-icon-CaretLeft-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-select-wrapper"
+                >
+                  <div
+                    class="lds-select-input-wrapper"
+                  >
+                    <input
+                      id="calendarMonth"
+                      name="calendarMonth"
+                      type="hidden"
+                      value="10"
+                    />
+                    <button
+                      aria-describedby="calendarMonth-option-btn-10"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-invalid="false"
+                      aria-label="Select month"
+                      aria-required="false"
+                      class="button-clear-style lds-select date-input month"
+                      id="calendarMonth-button"
+                      tabindex="0"
+                    >
+                      October
+                      <lds-icon
+                        aria-hidden="true"
+                        class="caret-down"
+                        name="CaretDown"
+                      />
+                    </button>
+                    <div
+                      aria-hidden="true"
+                      class="lds-select-options"
+                      role="listbox"
+                    >
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-0"
+                        id="calendarMonth-option-btn-0"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        April
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-1"
+                        id="calendarMonth-option-btn-1"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        August
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-2"
+                        id="calendarMonth-option-btn-2"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        December
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-3"
+                        id="calendarMonth-option-btn-3"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        February
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-4"
+                        id="calendarMonth-option-btn-4"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        January
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-5"
+                        id="calendarMonth-option-btn-5"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        July
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-6"
+                        id="calendarMonth-option-btn-6"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        June
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-7"
+                        id="calendarMonth-option-btn-7"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        March
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-8"
+                        id="calendarMonth-option-btn-8"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        May
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-9"
+                        id="calendarMonth-option-btn-9"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        November
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option selected"
+                        data-option="calendarMonth-option-btn-10"
+                        id="calendarMonth-option-btn-10"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        October
+                      </button>
+                      <button
+                        class="lds-button-clear-style lds-select-option"
+                        data-option="calendarMonth-option-btn-11"
+                        id="calendarMonth-option-btn-11"
+                        role="option"
+                        tabindex="-1"
+                      >
+                        September
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <label
+                  class="lds-form-label"
+                >
+                  <input
+                    aria-describedby=""
+                    aria-label="Select year"
+                    class="date-input year"
+                    id="calendarDay"
+                    maxlength="4"
+                    minlength="4"
+                    name="calendarDay"
+                    type="number"
+                    value="2023"
+                  />
+                </label>
+                <button
+                  aria-label="Next month"
+                  class="lds-button compact calendar-arrow icon-only"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-CaretRight-title-123456789 lds-icon-CaretRight-description-123456789"
+                    class="lds-icon icon-CaretRight inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-CaretRight-title-123456789"
+                    >
+                      CaretRight
+                    </title>
+                    <desc
+                      id="lds-icon-CaretRight-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+              </div>
+              <table
+                aria-label="October 2023"
+                class="lds-calendar-table"
+                role="grid"
+                tabindex="-1"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      aria-label="Sunday"
+                      scope="col"
+                    >
+                      Sun
+                    </th>
+                    <th
+                      aria-label="Monday"
+                      scope="col"
+                    >
+                      Mon
+                    </th>
+                    <th
+                      aria-label="Tuesday"
+                      scope="col"
+                    >
+                      Tue
+                    </th>
+                    <th
+                      aria-label="Wednesday"
+                      scope="col"
+                    >
+                      Wed
+                    </th>
+                    <th
+                      aria-label="Thursday"
+                      scope="col"
+                    >
+                      Thu
+                    </th>
+                    <th
+                      aria-label="Friday"
+                      scope="col"
+                    >
+                      Fri
+                    </th>
+                    <th
+                      aria-label="Saturday"
+                      scope="col"
+                    >
+                      Sat
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="calendar-day outside"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-9-29"
+                        data-outside="true"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 29 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          29
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day outside"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-9-30"
+                        data-outside="true"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 30 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          30
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day outside"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-9-31"
+                        data-outside="true"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 31 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          31
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-1"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 1 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          1
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-2"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 2 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          2
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-3"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 3 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          3
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-4"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 4 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          4
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-5"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 5 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          5
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-6"
+                        disabled=""
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 6 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          6
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day today"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-7"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          Todays date
+                        </span>
+                        <span
+                          class="sr-only"
+                        >
+                          October 7 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          7
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-8"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 8 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          8
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-9"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 9 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          9
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-10"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 10 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          10
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-11"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 11 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          11
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-12"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 12 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          12
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-13"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 13 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          13
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-14"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 14 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          14
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-15"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 15 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          15
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-16"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 16 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          16
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-17"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 17 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          17
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-18"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 18 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          18
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-19"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 19 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          19
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-20"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 20 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          20
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-21"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 21 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          21
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-22"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 22 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          22
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-23"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 23 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          23
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-24"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 24 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          24
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-25"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 25 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          25
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-26"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 26 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          26
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-27"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 27 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          27
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-28"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 28 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          28
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-29"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 29 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          29
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-10-30"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 30 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          30
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day outside"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-11-1"
+                        data-outside="true"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 1 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          1
+                        </span>
+                      </button>
+                    </td>
+                    <td
+                      class="calendar-day outside"
+                      role="gridcell"
+                    >
+                      <button
+                        class="lds-button-clear-style focus day-btn"
+                        data-date="2023-11-2"
+                        data-outside="true"
+                        tabindex="-1"
+                      >
+                        <span
+                          class="sr-only"
+                        >
+                          October 2 2023
+                        </span>
+                        <span
+                          aria-hidden="true"
+                        >
+                          2
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div
+          class="AddAppointment__form_schedule_time_picker"
+        >
+          <div
+            class="lds-select-wrapper"
+          >
+            <label
+              class="lds-form-label"
+              for="scheduleTime-timepicker-id-button"
+            >
+              <div>
+                <label
+                  class="label"
+                  for="scheduleTime-timepicker-id"
+                >
+                  TIME
+                </label>
+                <p
+                  class="hint"
+                >
+                  Format: HH:MM
+                </p>
+              </div>
+            </label>
+            <div
+              class="lds-select-input-wrapper"
+            >
+              <input
+                id="scheduleTime-timepicker-id"
+                name="scheduleTime"
+                type="hidden"
+                value="-1"
+              />
+              <button
+                aria-describedby="scheduleTime-timepicker-id-option-btn-0"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-invalid="false"
+                aria-required="false"
+                class="button-clear-style lds-select"
+                id="scheduleTime-timepicker-id-button"
+                tabindex="0"
+              >
+                Select Time
+                <lds-icon
+                  aria-hidden="true"
+                  class="caret-down"
+                  name="CaretDown"
+                />
+              </button>
+              <div
+                aria-hidden="true"
+                class="lds-select-options"
+                role="listbox"
+              >
+                <button
+                  class="lds-button-clear-style lds-select-option selected"
+                  data-option="scheduleTime-timepicker-id-option-btn--1"
+                  id="scheduleTime-timepicker-id-option-btn-0"
+                  role="option"
+                  tabindex="-1"
+                >
+                  Select Time
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-5"
+                  id="scheduleTime-timepicker-id-option-btn-1"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-5.15"
+                  id="scheduleTime-timepicker-id-option-btn-2"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-5.3"
+                  id="scheduleTime-timepicker-id-option-btn-3"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-5.45"
+                  id="scheduleTime-timepicker-id-option-btn-4"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-6"
+                  id="scheduleTime-timepicker-id-option-btn-5"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-6.15"
+                  id="scheduleTime-timepicker-id-option-btn-6"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-6.3"
+                  id="scheduleTime-timepicker-id-option-btn-7"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-6.45"
+                  id="scheduleTime-timepicker-id-option-btn-8"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-7"
+                  id="scheduleTime-timepicker-id-option-btn-9"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-7.15"
+                  id="scheduleTime-timepicker-id-option-btn-10"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-7.3"
+                  id="scheduleTime-timepicker-id-option-btn-11"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-7.45"
+                  id="scheduleTime-timepicker-id-option-btn-12"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-8"
+                  id="scheduleTime-timepicker-id-option-btn-13"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-8.15"
+                  id="scheduleTime-timepicker-id-option-btn-14"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-8.3"
+                  id="scheduleTime-timepicker-id-option-btn-15"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-8.45"
+                  id="scheduleTime-timepicker-id-option-btn-16"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-9"
+                  id="scheduleTime-timepicker-id-option-btn-17"
+                  role="option"
+                  tabindex="-1"
+                >
+                  09:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-9.15"
+                  id="scheduleTime-timepicker-id-option-btn-18"
+                  role="option"
+                  tabindex="-1"
+                >
+                  09:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-9.3"
+                  id="scheduleTime-timepicker-id-option-btn-19"
+                  role="option"
+                  tabindex="-1"
+                >
+                  09:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-9.45"
+                  id="scheduleTime-timepicker-id-option-btn-20"
+                  role="option"
+                  tabindex="-1"
+                >
+                  09:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-10"
+                  id="scheduleTime-timepicker-id-option-btn-21"
+                  role="option"
+                  tabindex="-1"
+                >
+                  10:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-10.15"
+                  id="scheduleTime-timepicker-id-option-btn-22"
+                  role="option"
+                  tabindex="-1"
+                >
+                  10:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-10.3"
+                  id="scheduleTime-timepicker-id-option-btn-23"
+                  role="option"
+                  tabindex="-1"
+                >
+                  10:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-10.45"
+                  id="scheduleTime-timepicker-id-option-btn-24"
+                  role="option"
+                  tabindex="-1"
+                >
+                  10:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-11"
+                  id="scheduleTime-timepicker-id-option-btn-25"
+                  role="option"
+                  tabindex="-1"
+                >
+                  11:00 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-11.15"
+                  id="scheduleTime-timepicker-id-option-btn-26"
+                  role="option"
+                  tabindex="-1"
+                >
+                  11:15 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-11.3"
+                  id="scheduleTime-timepicker-id-option-btn-27"
+                  role="option"
+                  tabindex="-1"
+                >
+                  11:30 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-11.45"
+                  id="scheduleTime-timepicker-id-option-btn-28"
+                  role="option"
+                  tabindex="-1"
+                >
+                  11:45 AM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-12"
+                  id="scheduleTime-timepicker-id-option-btn-29"
+                  role="option"
+                  tabindex="-1"
+                >
+                  12:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-12.15"
+                  id="scheduleTime-timepicker-id-option-btn-30"
+                  role="option"
+                  tabindex="-1"
+                >
+                  12:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-12.3"
+                  id="scheduleTime-timepicker-id-option-btn-31"
+                  role="option"
+                  tabindex="-1"
+                >
+                  12:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-12.45"
+                  id="scheduleTime-timepicker-id-option-btn-32"
+                  role="option"
+                  tabindex="-1"
+                >
+                  12:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-13"
+                  id="scheduleTime-timepicker-id-option-btn-33"
+                  role="option"
+                  tabindex="-1"
+                >
+                  01:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-13.15"
+                  id="scheduleTime-timepicker-id-option-btn-34"
+                  role="option"
+                  tabindex="-1"
+                >
+                  01:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-13.3"
+                  id="scheduleTime-timepicker-id-option-btn-35"
+                  role="option"
+                  tabindex="-1"
+                >
+                  01:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-13.45"
+                  id="scheduleTime-timepicker-id-option-btn-36"
+                  role="option"
+                  tabindex="-1"
+                >
+                  01:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-14"
+                  id="scheduleTime-timepicker-id-option-btn-37"
+                  role="option"
+                  tabindex="-1"
+                >
+                  02:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-14.15"
+                  id="scheduleTime-timepicker-id-option-btn-38"
+                  role="option"
+                  tabindex="-1"
+                >
+                  02:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-14.3"
+                  id="scheduleTime-timepicker-id-option-btn-39"
+                  role="option"
+                  tabindex="-1"
+                >
+                  02:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-14.45"
+                  id="scheduleTime-timepicker-id-option-btn-40"
+                  role="option"
+                  tabindex="-1"
+                >
+                  02:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-15"
+                  id="scheduleTime-timepicker-id-option-btn-41"
+                  role="option"
+                  tabindex="-1"
+                >
+                  03:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-15.15"
+                  id="scheduleTime-timepicker-id-option-btn-42"
+                  role="option"
+                  tabindex="-1"
+                >
+                  03:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-15.3"
+                  id="scheduleTime-timepicker-id-option-btn-43"
+                  role="option"
+                  tabindex="-1"
+                >
+                  03:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-15.45"
+                  id="scheduleTime-timepicker-id-option-btn-44"
+                  role="option"
+                  tabindex="-1"
+                >
+                  03:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-16"
+                  id="scheduleTime-timepicker-id-option-btn-45"
+                  role="option"
+                  tabindex="-1"
+                >
+                  04:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-16.15"
+                  id="scheduleTime-timepicker-id-option-btn-46"
+                  role="option"
+                  tabindex="-1"
+                >
+                  04:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-16.3"
+                  id="scheduleTime-timepicker-id-option-btn-47"
+                  role="option"
+                  tabindex="-1"
+                >
+                  04:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-16.45"
+                  id="scheduleTime-timepicker-id-option-btn-48"
+                  role="option"
+                  tabindex="-1"
+                >
+                  04:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-17"
+                  id="scheduleTime-timepicker-id-option-btn-49"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-17.15"
+                  id="scheduleTime-timepicker-id-option-btn-50"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-17.3"
+                  id="scheduleTime-timepicker-id-option-btn-51"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-17.45"
+                  id="scheduleTime-timepicker-id-option-btn-52"
+                  role="option"
+                  tabindex="-1"
+                >
+                  05:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-18"
+                  id="scheduleTime-timepicker-id-option-btn-53"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-18.15"
+                  id="scheduleTime-timepicker-id-option-btn-54"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-18.3"
+                  id="scheduleTime-timepicker-id-option-btn-55"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-18.45"
+                  id="scheduleTime-timepicker-id-option-btn-56"
+                  role="option"
+                  tabindex="-1"
+                >
+                  06:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-19"
+                  id="scheduleTime-timepicker-id-option-btn-57"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-19.15"
+                  id="scheduleTime-timepicker-id-option-btn-58"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-19.3"
+                  id="scheduleTime-timepicker-id-option-btn-59"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-19.45"
+                  id="scheduleTime-timepicker-id-option-btn-60"
+                  role="option"
+                  tabindex="-1"
+                >
+                  07:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-20"
+                  id="scheduleTime-timepicker-id-option-btn-61"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:00 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-20.15"
+                  id="scheduleTime-timepicker-id-option-btn-62"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:15 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-20.3"
+                  id="scheduleTime-timepicker-id-option-btn-63"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:30 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-20.45"
+                  id="scheduleTime-timepicker-id-option-btn-64"
+                  role="option"
+                  tabindex="-1"
+                >
+                  08:45 PM
+                </button>
+                <button
+                  class="lds-button-clear-style lds-select-option"
+                  data-option="scheduleTime-timepicker-id-option-btn-21"
+                  id="scheduleTime-timepicker-id-option-btn-65"
+                  role="option"
+                  tabindex="-1"
+                >
+                  09:00 PM
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <fieldset
+        class="lds-checkbox-group"
+      >
+        <legend>
+          CARE PARTNERS (OPTIONAL)
+        </legend>
+        <div
+          class="AddAppointment__form_checkbox_group"
+        >
+          <div
+            class="AddAppointment__form_checkbox_group_check"
+          >
+            <label
+              class="lds-check-label"
+            >
+              <input
+                class="lds-checkbox"
+                name="carePartners"
+                type="checkbox"
+                value="1"
+              />
+              Henry
+            </label>
+          </div>
+          <div
+            class="AddAppointment__form_checkbox_group_check"
+          >
+            <label
+              class="lds-check-label"
+            >
+              <input
+                class="lds-checkbox"
+                name="carePartners"
+                type="checkbox"
+                value="2"
+              />
+              Charlote
+            </label>
+          </div>
+          <div
+            class="AddAppointment__form_checkbox_group_check"
+          >
+            <label
+              class="lds-check-label"
+            >
+              <input
+                class="lds-checkbox"
+                name="carePartners"
+                type="checkbox"
+                value="3"
+              />
+              Brian
+            </label>
+          </div>
+          <div
+            class="AddAppointment__form_checkbox_group_check"
+          >
+            <label
+              class="lds-check-label"
+            >
+              <input
+                class="lds-checkbox"
+                name="carePartners"
+                type="checkbox"
+                value="4"
+              />
+              Mary
+            </label>
+          </div>
+          <button
+            class="AddAppointment__form_checkbox_group_add_btn"
+            data-testid="add-care-partner-button"
+            type="button"
+          >
+            <img
+              alt="heart icon"
+              class="AddAppointment__form_checkbox_group_add_btn_icon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/heart-icon-orange.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <span
+              class="AddAppointment__form_checkbox_group_add_btn_text"
+            >
+              Add new care partner
+            </span>
+          </button>
+        </div>
+      </fieldset>
+      <div
+        class="AddAppointment__form_buttons_wrapper"
+      >
+        <button
+          class="lds-button primary AddAppointment__form_buttons"
+          data-testid="add-appointment-button"
+          id="mySubmitId"
+          type="submit"
+        >
+          Save
+        </button>
+        <button
+          class="lds-button secondary AddAppointment__form_buttons"
+          data-testid="add-appointment-form-cancel-button"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+    <div
+      class="primary modal"
+    >
+      <div
+        class="lds-modal"
+        id="addCarePartnerModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <div
+                  class="lds-modal-body"
+                >
+                  <div
+                    class="closeModalButtonWrapper"
+                  >
+                    <button
+                      class="closeModalButton"
+                      type="button"
+                    >
+                      <svg
+                        aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                        class="lds-icon icon-X closeIcon"
+                        focusable="false"
+                        role="img"
+                      >
+                        <title
+                          id="lds-icon-X-title-123456789"
+                        >
+                          X
+                        </title>
+                        <desc
+                          id="lds-icon-X-description-123456789"
+                        />
+                        <svg
+                          viewBox="0 0 256 256"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                          />
+                        </svg>
+                      </svg>
+                    </button>
+                  </div>
+                  <h2
+                    class="modalTitle"
+                  >
+                    Add care partner
+                  </h2>
+                  <form
+                    class="form"
+                  >
+                    <div
+                      class="formContent"
+                    >
+                      <div>
+                        <label
+                          class="lds-form-label"
+                        >
+                          NAME
+                          <input
+                            aria-describedby=""
+                            class="lds-text-field"
+                            id="name"
+                            name="name"
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                      <div>
+                        <label
+                          class="lds-form-label"
+                        >
+                          EMAIL ADDRESS
+                          <input
+                            aria-describedby=""
+                            class="lds-text-field"
+                            id="emailAddress"
+                            name="emailAddress"
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      class="modalActions"
+                    >
+                      <button
+                        class="lds-button secondary"
+                        type="button"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        class="lds-button primary"
+                        data-testid="add-care-partner-save-button"
+                        type="submit"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

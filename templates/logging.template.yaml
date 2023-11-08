@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  ServiceKey:
+    Type: String
+
+Resources:
+  CloudwatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /lc3/${NeighborhoodKey}/${ServiceKey}
+      RetentionInDays: 14
+
+  CloudwatchLogsSubscriptionFilter:
+    Type: AWS::Logs::SubscriptionFilter
+    Properties:
+      LogGroupName: !Ref CloudwatchLogsGroup
+      DestinationArn: arn:aws:logs:us-east-1:026352751834:destination:CloudwatchLogsDestination
+      FilterPattern: ''
+
+Outputs:
+  LogGroup:
+    Value: !Ref CloudwatchLogsGroup

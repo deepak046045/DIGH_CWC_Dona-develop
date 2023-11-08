@@ -1,0 +1,226 @@
+@import '@/scss/abstracts/mixins';
+@import '@/scss/themes/colors';
+@import '@/scss/themes/typography.module';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include ScreenSizeXXL(true) {
+    padding: 3.5rem 2rem 2rem 2rem;
+  }
+
+  @include ScreenSizeXL(true) {
+    padding: 3.5rem 3rem 2rem 3rem;
+  }
+
+  @include ScreenSizeSmall(true) {
+    gap: 1.5rem;
+    padding: 0 1rem 2rem 1rem;
+  }
+}
+
+.headerText {
+  @extend .themeTypographyTitle;
+  color: $theme-color-darker-gray;
+}
+
+.subHeaderText {
+  @extend .themeTypographyBody;
+  color: $theme-color-darker-gray;
+
+  @include ScreenSizeSmall(true) {
+    color: $theme-color-light-black;
+  }
+}
+
+.addAppointmentButton {
+  --lds-spacing-button-padding-right: 0.5rem;
+  --lds-spacing-button-padding-left: 0.5rem;
+}
+
+.headerButtonAndSwitch {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include ScreenSizeSmall(true) {
+    align-items: center;
+  }
+}
+
+.appointmentGrid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr 2fr 3fr 2fr 2fr;
+  grid-template-areas: 'date time address type carePartner actions';
+
+  @include ScreenSizeSmall(true) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'date';
+  }
+}
+
+.appointmentGrid > :nth-child(-n + 6) {
+  background-color: $theme-color-darker-gray;
+  color: $theme-color-white;
+}
+
+.appointmentGrid > :nth-child(12n + 13),
+.appointmentGrid > :nth-child(12n + 14),
+.appointmentGrid > :nth-child(12n + 15),
+.appointmentGrid > :nth-child(12n + 16),
+.appointmentGrid > :nth-child(12n + 17),
+.appointmentGrid > :nth-child(12n + 18) {
+  background-color: $theme-color-background-secondary;
+}
+
+.appointmentGrid > :nth-child(6n + 1) {
+  @include ScreenSizeXXL(true) {
+    padding-left: 2rem;
+  }
+
+  @include ScreenSizeXL(true) {
+    padding-left: 3rem;
+  }
+
+  @include ScreenSizeSmall(true) {
+    padding-left: 1rem;
+  }
+}
+
+.appointmentGrid > :nth-child(6n) {
+  @include ScreenSizeXXL(true) {
+    padding-right: 2rem;
+  }
+
+  @include ScreenSizeXL(true) {
+    padding-right: 3rem;
+  }
+}
+
+.gridHeaderCell {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  align-items: center;
+
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2rem;
+
+  @include ScreenSizeSmall(true) {
+    display: none !important;
+  }
+}
+
+.mobileRowIcon {
+  @include ScreenSizeXXL(true) {
+    display: none;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: flex;
+  }
+}
+
+.gridCell {
+  padding: 1rem 0.5rem;
+
+  @extend .themeTypographyBody;
+
+  @include ScreenSizeSmall(true) {
+    padding-left: 1rem;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.type {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  @include ScreenSizeSmall(true) {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 1rem;
+  }
+}
+
+.actionButtonEdit {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButtonDelete {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  .buttonLabel {
+    font-size: 16px;
+    padding-left: 0.5rem;
+  }
+}
+
+.noAppointments {
+  display: block;
+  justify-content: center;
+  padding: 2rem 1rem 0 1rem;
+
+  @extend .themeTypographyBody;
+  color: $theme-color-darker-gray;
+  text-align: center;
+}
+
+.mobileHeader {
+  @include ScreenSizeXXL(true) {
+    display: none;
+  }
+
+  @include ScreenSizeSmall(true) {
+    background: $theme-color-darker-gray;
+    display: flex;
+    padding: 1rem;
+
+    color: $theme-color-white;
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+}
+
+.appointmentsHorizontalRule {
+  --lds-color-hr-border-top: #adb3b8;
+  --lds-color-hr-opacity: 1;
+  width: 2rem;
+
+  @include ScreenSizeXXL(true) {
+    display: none;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: block;
+  }
+}

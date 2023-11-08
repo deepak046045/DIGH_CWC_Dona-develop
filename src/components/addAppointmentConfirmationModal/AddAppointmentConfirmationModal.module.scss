@@ -1,0 +1,20 @@
+@import '../../scss/abstracts/mixins';
+
+.closeModalButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeModalButton {
+  border: none;
+  background: none;
+}
+
+.closeIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.modal {
+  --lds-spacing-modal-body-padding-top: 0;
+}

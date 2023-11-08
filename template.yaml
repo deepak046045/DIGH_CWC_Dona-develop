@@ -1,0 +1,178 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  ServiceKey:
+    Type: String
+    Default: digh-cwc-dona
+    Description: The key by which to correlate stacks belonging to the same service
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  OrganizationID:
+    Type: String
+    Default: o-k6e9kv9jcq
+
+  HealthCheckPath:
+    Type: String
+    Default: /api/healthcheck
+
+  HealthCheckStatusCodes:
+    Type: String
+    Default: 200
+
+  InternalCertificateExpirationDate:
+    Type: String
+
+  SigningCertificate:
+    Type: String
+    AllowedValues:
+      - RootCert1
+      - RootCert2
+
+  ECSTaskExecutionRoleName:
+    Type: String
+    Default: ConnectedCareECSTaskExecutionRole
+
+  ApplicationAutoscalingECSServiceRoleName:
+    Type: String
+    Default: ConnectedCareApplicationAutoscalingECSService
+
+  RegistryId:
+    Type: String
+    Default: '508547968749'
+
+  ImageRepositoryRegion:
+    Type: String
+    Default: 'us-east-1'
+
+  ImageRepository:
+    Type: String
+    Default: 'digh-cwc-dona'
+
+  ImageTag:
+    Type: String
+    Default: '##IMAGE_TAG##'
+
+  Memory:
+    Type: Number
+    Default: 512
+
+  CPU:
+    Type: Number
+    Default: 256
+
+  MinCapacity:
+    Type: Number
+    Default: 2
+
+  MaxCapacity:
+    Type: Number
+    Default: 6
+
+  TargetRequestCountPerTarget:
+    Type: Number
+    Default: 200
+
+  ContainerCmd:
+    Type: String
+    Default: 'npm start'
+
+  ScaleInCooldown:
+    Type: Number
+    Default: 60
+
+  ScaleOutCooldown:
+    Type: Number
+    Default: 60
+
+  RestrictExternalAccess:
+    Type: String
+    AllowedValues:
+      - 'true'
+      - 'false'
+    Default: 'false'
+
+  HttpToHttpsRedirect:
+    Type: String
+    AllowedValues:
+      - 'true'
+      - 'false'
+    Default: 'false'
+
+  TypeTag:
+    Type: String
+    Default: Public
+
+  EnvTag:
+    Type: String
+    Default: NonProd
+
+  ExternalCertificateArn:
+    Type: String
+    Description: ARN of a certificate in ACM to associate with the internet-facing load balancer
+
+  HealthCheckTimeoutSeconds:
+    Type: Number
+    Default: 5
+
+  HealthyThresholdCount:
+    Type: Number
+    Default: 2
+
+  UnhealthyThresholdCount:
+    Type: Number
+    Default: 2
+
+  DeregistrationDelayTimeoutSeconds:
+    Type: Number
+    Default: 30
+
+  SslPolicy:
+    Type: String
+    Default: 'ELBSecurityPolicy-FS-1-2-Res-2020-10'
+
+Resources:
+  PublicPortal:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: templates/public-portal.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+        OrganizationID: !Ref OrganizationID
+        HealthCheckPath: !Ref HealthCheckPath
+        HealthCheckStatusCodes: !Ref HealthCheckStatusCodes
+        InternalCertificateExpirationDate: !Ref InternalCertificateExpirationDate
+        SigningCertificate: !Ref SigningCertificate
+        ECSTaskExecutionRoleName: !Ref ECSTaskExecutionRoleName
+        ApplicationAutoscalingECSServiceRoleName: !Ref ApplicationAutoscalingECSServiceRoleName
+        RegistryId: !Ref RegistryId
+        ImageRepositoryRegion: !Ref ImageRepositoryRegion
+        ImageRepository: !Ref ImageRepository
+        ImageTag: !Ref ImageTag
+        Memory: !Ref Memory
+        CPU: !Ref CPU
+        MinCapacity: !Ref MinCapacity
+        MaxCapacity: !Ref MaxCapacity
+        TargetRequestCountPerTarget: !Ref TargetRequestCountPerTarget
+        ContainerCmd: !Ref ContainerCmd
+        ScaleInCooldown: !Ref ScaleInCooldown
+        ScaleOutCooldown: !Ref ScaleOutCooldown
+        RestrictExternalAccess: !Ref RestrictExternalAccess
+        HttpToHttpsRedirect: !Ref HttpToHttpsRedirect
+        ExternalCertificateArn: !Ref ExternalCertificateArn
+        TypeTag: !Ref TypeTag
+        EnvTag: !Ref EnvTag
+        HealthCheckTimeoutSeconds: !Ref HealthCheckTimeoutSeconds
+        HealthyThresholdCount: !Ref HealthyThresholdCount
+        UnhealthyThresholdCount: !Ref UnhealthyThresholdCount
+        DeregistrationDelayTimeoutSeconds: !Ref DeregistrationDelayTimeoutSeconds
+        SslPolicy: !Ref SslPolicy

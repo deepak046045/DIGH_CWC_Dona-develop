@@ -1,0 +1,102 @@
+@import '@/scss/themes/colors';
+
+.closeMenuButton {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: $theme-color-light-black;
+  text-align: right;
+  text-transform: none;
+
+  /* Should be replaced with typography when LDS integrated */
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.menu {
+  border-top: 1px solid $theme-color-darker-gray;
+  padding: 16px 16px 16px 0;
+}
+
+.navigationButton,
+.navigationButtonActive {
+  padding: 12px 32px 12px 16px;
+  border-radius: 0 25px 25px 0;
+  text-transform: none;
+  background-color: $theme-color-white;
+  color: $theme-color-darker-gray;
+  justify-content: flex-start;
+  box-shadow: none;
+
+  /* Should be replaced with typography when LDS integrated */
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.navigationButton {
+  font-weight: 600;
+}
+
+.navigationButtonActive {
+  background-color: $theme-color-primary;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.navigationButton:hover,
+.navigationButton:focus {
+  background-color: $theme-color-background-secondary;
+  color: $theme-color-light-black;
+  outline: none;
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+.navigationButtonActive:hover,
+.navigationButtonActive:focus {
+  background-color: $theme-color-primary;
+  color: $theme-color-white;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.signInOutSection {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding: 24px;
+  background-color: $theme-color-background-secondary;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menuContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: $theme-color-white;
+}
+
+.topRightControls {
+  display: flex;
+  gap: 16px;
+  padding-left: 15px;
+}
+
+.signInButtonPadding,
+.signUpOutButtonPadding {
+  padding: 11px 21px;
+}
+
+.closeIcon {
+  height: 24px;
+  width: 24px;
+}

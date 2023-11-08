@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreatmentMapList should render page 1`] = `
+<div>
+  <div
+    class="TreatmentMapList gutter"
+    style="border-top: 1px solid black; border-bottom: 1px solid black; background: lightgrey; color: white; display: flex; align-content: center; justify-content: center; padding: 20px 0px;"
+  >
+    <p
+      style="text-align: center; margin: 0px;"
+    >
+      Treatment Map List Placeholder
+    </p>
+  </div>
+</div>
+`;

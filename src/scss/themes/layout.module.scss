@@ -1,0 +1,13 @@
+$content-area-max-width: 1441px;
+$form-content-area-max-width: 522px;
+
+.gutter {
+  max-width: $content-area-max-width;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.gutter__form {
+  @extend .gutter;
+  max-width: $form-content-area-max-width;
+}

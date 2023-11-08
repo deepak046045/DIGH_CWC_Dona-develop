@@ -1,0 +1,97 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation Template to create ECS CloudWatch Metric Alarms'
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  ServiceKey:
+    Type: String
+
+Resources:
+  CPUUtilizationAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      ActionsEnabled: true
+      AlarmActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      AlarmDescription: !Sub '${NeighborhoodKey}-${ServiceKey}-ECS alarm for CPU Utilization'
+      AlarmName: !Sub '${NeighborhoodKey}-${ServiceKey}-CPU-UTILIZATION-ALARM-ECS'
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      EvaluationPeriods: 15
+      DatapointsToAlarm: 3
+      MetricName: 'CPUUtilization'
+      Namespace: 'AWS/ECS'
+      Period: 60
+      Statistic: 'Average'
+      Dimensions:
+        - Name: ClusterName
+          Value: !Sub ${NeighborhoodKey}
+        - Name: ServiceName
+          Value: !Ref 'ServiceKey'
+      Threshold: 80
+      TreatMissingData: 'notBreaching'
+
+  MemoryUtilizationAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      ActionsEnabled: true
+      AlarmActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      AlarmDescription: !Sub '${NeighborhoodKey}-${ServiceKey}-ECS alarm for Memory utilization metrics'
+      AlarmName: !Sub '${NeighborhoodKey}-${ServiceKey}-MEMORY-UTILIZATION-ALARM-ECS'
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      EvaluationPeriods: 15
+      DatapointsToAlarm: 3
+      MetricName: 'MemoryUtilization'
+      Namespace: 'AWS/ECS'
+      Period: 60
+      Statistic: 'Average'
+      Dimensions:
+        - Name: ClusterName
+          Value: !Sub ${NeighborhoodKey}
+        - Name: ServiceName
+          Value: !Ref 'ServiceKey'
+      Threshold: 80
+      TreatMissingData: 'notBreaching'
+
+  FlappingAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub '${NeighborhoodKey}-${ServiceKey}-FLAPPING-ALARM'
+      AlarmDescription: !Sub Flapping alarm for ${ServiceKey}
+      AlarmActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      OKActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      MetricName: is_unstable
+      Namespace: ECS
+      Statistic: Maximum
+      Period: 60
+      TreatMissingData: ignore
+      EvaluationPeriods: 16
+      DatapointsToAlarm: 8
+      Threshold: 0
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: Cluster
+          Value: !Sub ${NeighborhoodKey}
+        - Name: Service
+          Value: !Ref ServiceKey
+
+Outputs:
+  CPUUtilization:
+    Description: CPU Utilization Alarm Name
+    Value: !Sub '${NeighborhoodKey}-${ServiceKey}-CPU-UTILIZATION-ALARM-ECS'
+
+  MemoryUtilization:
+    Description: Memory Utilization Alarm Name
+    Value: !Sub '${NeighborhoodKey}-${ServiceKey}-MEMORY-UTILIZATION-ALARM-ECS'
+
+  FlappingAlarmArn:
+    Description: Flapping Alarm arn
+    Value: !GetAtt FlappingAlarm.Arn

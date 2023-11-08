@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render page 1`] = `
+<div>
+  <div>
+    <div
+      id="isiIntersectionObserver"
+      style="height: 1px; margin-top: 2px;"
+    />
+    <section
+      aria-labelledby="isiHeading"
+      class="lds-isi-v2 lds-isi-wrapper"
+      id="isiPanel"
+      role="region"
+    >
+      <div
+        class="lds-isi-spacer"
+        id="isiSpacer"
+      />
+      <div
+        class="lds-isi lds-isi-loaded"
+        id="lds-isi"
+        style="top: 0px;"
+      >
+        <button
+          aria-controls="isiPanel"
+          aria-expanded="false"
+          class="lds-button-clear-style lds-isi-banner"
+          id="isiHeading"
+          type="button"
+        >
+          <span
+            class="lds-isi-banner-wrapper wrapper"
+          >
+            <span
+              class="visually-hidden"
+              id="isiHiddenPanelCollapseText"
+            >
+              Important Safety Information and Indication or Indications. Select to Expand.
+            </span>
+            <span
+              aria-hidden="true"
+              class="lds-isi-banner-column isi col-11 col-lg-7"
+            >
+              <span
+                aria-hidden="true"
+                class="lds-isi-banner-text isi"
+              >
+                Important Safety Information
+              </span>
+            </span>
+            <span
+              aria-hidden="true"
+              class="lds-isi-banner-column indications col-11 col-lg-4"
+            >
+              <span
+                aria-hidden="true"
+                class="lds-isi-banner-text indications"
+              >
+                Indication(s)
+              </span>
+            </span>
+            <span
+              class="lds-isi-banner-column toggle col-1"
+            >
+              <span
+                class="lds-isi-toggle"
+                id="isiBannerToggle"
+              >
+                <lds-icon
+                  decorative="true"
+                  id="isiBannerIconExpand"
+                  inline="true"
+                  label="Important Safety Information and Indication or Indications. Select to Expand."
+                  name="PlusCircleFill"
+                />
+              </span>
+            </span>
+          </span>
+        </button>
+        <div
+          class="lds-isi-main"
+          id="isiMain"
+        >
+          <div
+            class="lds-isi-main-wrapper"
+            id="isiMainWrapper"
+          >
+            <div
+              class="lds-isi-main-column isi col-12 col-lg-7"
+              id="isiMainColumn"
+            >
+              <div
+                aria-labelledby="ldsIsiColumnHeading"
+                class="lds-isi-main-content-panel isi"
+                id="isiPanelIsi"
+                role="region"
+              >
+                <button
+                  aria-controls="isiPanel isiPanelIsi"
+                  class="lds-button-clear-style lds-isi-content-banner isi"
+                  id="isiContentMobileToggle"
+                >
+                  <span
+                    class="lds-isi-banner-wrapper wrapper"
+                  >
+                    <span
+                      class="visually-hidden"
+                      id="isiHiddenContentMobileTextCollapse"
+                    >
+                      Important Safety Information. Select to Expand.
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="lds-isi-banner-column isi col-11"
+                    >
+                      <span
+                        class="lds-isi-banner-text isi"
+                      >
+                        Important Safety Information
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="lds-isi-banner-column toggle col-1"
+                    >
+                      <span
+                        class="lds-isi-toggle"
+                        id="isiBannerToggle2"
+                      >
+                        <lds-icon
+                          classname="lds-isi-hidden"
+                          decorative="true"
+                          id="bannerToggle2IconCollapse"
+                          inline="true"
+                          label="Important Safety Information. Select to Expand."
+                          name="PlusCircleFill"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </button>
+                <div
+                  class="lds-isi-content-container isi"
+                  id="isiContentColumnContainer"
+                >
+                  <div
+                    class="lds-isi-content-wrapper"
+                  >
+                    <h2
+                      class="lds-isi-heading isi"
+                      id="ldsIsiColumnHeading"
+                    >
+                      Important Safety Information
+                    </h2>
+                    <div
+                      class="lds-isi-content isi"
+                    >
+                      <div
+                        class="content-block lds-isi-warning-block"
+                      >
+                        <div
+                          class="lds-isi-warning-paragraph p"
+                        >
+                          <h3
+                            class="lds-isi-warning-block-heading"
+                          >
+                            Warnings 
+                          </h3>
+                          <p
+                            class="lds-isi-warning-block-paragraph"
+                          >
+                            This is the warning block paragraph content
+                          </p>
+                        </div>
+                        <p>
+                          This is content for the warning block
+                        </p>
+                        <ul>
+                          <li>
+                            Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant.
+                          </li>
+                          <li>
+                            Sociis natoque penatibus et magnis dis parturient montes nascetur.
+                          </li>
+                          <li>
+                            Proin fermentum leo vel orci porta non pulvinar.
+                          </li>
+                        </ul>
+                      </div>
+                      <div
+                        class="content-block"
+                      >
+                        <h4>
+                          This is content for the default content block
+                        </h4>
+                        <p>
+                          Sociis natoque penatibus et magnis dis parturient montes nascetur.
+                        </p>
+                      </div>
+                      <div
+                        class="content-block"
+                      >
+                        <p>
+                          Sociis natoque penatibus et magnis dis parturient montes nascetur.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lds-isi-main-column indications col-12 col-lg-5"
+              id="isiMainColumnIndications"
+            >
+              <div
+                aria-labelledby="ldsIsiColumnHeadingIndications"
+                class="lds-isi-main-content-panel indications"
+                id="isiPanelIndications"
+                role="region"
+              >
+                <button
+                  aria-controls="isiPanel isiPanelIndications"
+                  class="lds-button-clear-style lds-isi-content-banner indications"
+                  id="isiContentMobileToggleIndications"
+                >
+                  <span
+                    class="lds-isi-banner-wrapper wrapper"
+                  >
+                    <span
+                      class="visually-hidden"
+                      id="isiHiddenMobileButtonTextCollapse"
+                    >
+                      Indication or Indications. Select to Expand
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="lds-isi-banner-column indications col-11"
+                    >
+                      <span
+                        class="lds-isi-banner-text indications"
+                      >
+                        Indication(s)
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="lds-isi-banner-column toggle col-1"
+                    >
+                      <span
+                        class="lds-isi-toggle"
+                        id="isiBannerToggle3"
+                      >
+                        <lds-icon
+                          classname="lds-isi-hidden"
+                          decorative="true"
+                          id="bannerToggle3IconCollapse"
+                          inline="true"
+                          label="Indication or Indications. Select to Expand"
+                          name="PlusCircleFill"
+                        />
+                      </span>
+                    </span>
+                  </span>
+                </button>
+                <div
+                  class="lds-isi-content-container indications"
+                  id="contentContainerIndications"
+                >
+                  <div
+                    class="lds-isi-content-wrapper"
+                  >
+                    <h2
+                      class="lds-isi-heading indications"
+                      id="ldsIsiColumnHeadingIndications"
+                    >
+                      Indication(s)
+                    </h2>
+                    <div
+                      class="lds-isi-content indications"
+                    >
+                      <div
+                        class="content-block"
+                      >
+                        <p>
+                          Important Facts About BRAND
+                          <sup>
+                            ®
+                          </sup>
+                           (PRO-nun-CI-a-tion). It is also known as pharmaceutical.
+                        </p>
+                        <p>
+                          Brand is a prescription medicine for people with the following indications; it is used to produce pharmaceutical effects.
+                        </p>
+                        <ul>
+                          <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                          </li>
+                          <li>
+                            Dolore magna aliqua. Ut enim ad minim veniam, exercitation ullamco laboris nisi. Sapien pellentesque habitant morbi tristique senectus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Nulla facilisi cras fermentum odio. Non quam lacus suspendisse faucibus interdum posuere. Arcu odio ut sem nulla. Vel quam elementum pulvinar etiam non quam.
+                          </li>
+                          <li>
+                            Sit amet nisl purus in mollis nunc sed id. Eget arcu dictum varius duis at consectetur. Rhoncus aenean vel elit scelerisque mauris. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Tincidunt id aliquet risus feugiat in. Ut sem nulla pharetra diam. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Mattis rhoncus urna neque viverra justo. Varius vel pharetra vel turpis nunc.
+                          </li>
+                          <li>
+                            Augue lacus viverra vitae congue eu. Tincidunt arcu non sodales neque. Pellentesque dignissim enim sit amet venenatis. Donec ac odio tempor orci dapibus ultrices.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="footer"
+    >
+      <div
+        class="gutter"
+      >
+        <footer
+          class="lds-footer"
+          id="lds-footer"
+        >
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-9 lds-footer-menu-links"
+              >
+                <ul
+                  class="lds-footer-list lds-footer-list-even"
+                >
+                  <div
+                    class="mobileButton"
+                  >
+                    <li
+                      class="lds-footer-links-item"
+                    >
+                      <button
+                        class="lds-button primary"
+                        type="button"
+                      >
+                        Save to device home
+                      </button>
+                    </li>
+                  </div>
+                  <li
+                    class="lds-footer-links-item"
+                  >
+                    <a
+                      aria-label="Prescribing Information"
+                      class="white"
+                      href="#"
+                    >
+                      Prescribing Information
+                    </a>
+                  </li>
+                  <li
+                    class="lds-footer-links-item"
+                  >
+                    <a
+                      aria-label="Medication Guide"
+                      class="white"
+                      href="#"
+                    >
+                      Medication Guide
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="col-12 col-md-3 lds-footer-support"
+              >
+                <div
+                  class="supportInfo"
+                >
+                  <button
+                    class="lds-button primary desktopButton"
+                    type="button"
+                  >
+                    Save to device home
+                  </button>
+                  <div
+                    class="white mobileSupportInfo"
+                  >
+                    <strong>
+                      Questions? Call [Brand Name]™
+                    </strong>
+                    <br />
+                    [Brand Customer Support Number]
+                    <br />
+                    [Brand Operating Hours]
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="lds-footer-meta col-12"
+              >
+                <div
+                  class="legalInfo"
+                >
+                  <p
+                    class="white"
+                  >
+                    This site is intended for US residents ages 18 and older.
+                    <br />
+                    [Brand Name]™ is a registered trademark owned or licensed by Eli Lilly and Company, its subsidiaries, or affiliates.
+                    <br />
+                    XX-XX-XX-XXXX MM/YYYY
+                     
+                    <a
+                      aria-label="©Lilly USA, LLC 2023. All rights reserved."
+                      class="white"
+                      href="https://www.lillyhub.com/legal/lillyusa/english/copyright.html"
+                    >
+                      ©Lilly USA, LLC 2023. All rights reserved.
+                    </a>
+                  </p>
+                  <div
+                    class="white desktopSupportInfo"
+                  >
+                    <strong>
+                      Questions? Call [Brand Name]™
+                    </strong>
+                    <br />
+                    [Brand Customer Support Number]
+                    <br />
+                    [Brand Operating Hours]
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-auto order-md-2 ms-auto"
+              >
+                <div
+                  class="lds-footer-social-icons"
+                />
+                <div
+                  class="lds-footer-global-links text-center"
+                >
+                  <a
+                    aria-label="Privacy policy"
+                    class="white"
+                    href="https://www.lillyhub.com/legal/lillyusa/english/privacy.html"
+                  >
+                    Privacy policy
+                  </a>
+                  <a
+                    aria-label="Terms of use"
+                    class="white"
+                    href="https://www.lillyhub.com/legal/lillyusa/english/termsofuse.html"
+                  >
+                    Terms of use
+                  </a>
+                  <a
+                    aria-label="Accessibility Statement"
+                    class="white"
+                    href="https://www.lillyhub.com/ux/lillyusa/english/accessibility.html"
+                  >
+                    Accessibility Statement
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-auto order-md-1 lds-footer-logo"
+              >
+                <div
+                  class="footer-override"
+                >
+                  <a
+                    class="lds-link"
+                    href="https://www.lilly.com/"
+                  >
+                    <img
+                      alt="lilly-logo"
+                      src="/images/lilly-logo-white.svg"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+`;

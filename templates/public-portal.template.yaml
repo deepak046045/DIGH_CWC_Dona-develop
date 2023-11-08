@@ -1,0 +1,255 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+
+  ServiceKey:
+    Type: String
+
+  OrganizationID:
+    Type: String
+
+  HealthCheckPath:
+    Type: String
+
+  HealthCheckStatusCodes:
+    Type: String
+
+  InternalCertificateExpirationDate:
+    Type: String
+
+  SigningCertificate:
+    Type: String
+
+  ECSTaskExecutionRoleName:
+    Type: String
+
+  ApplicationAutoscalingECSServiceRoleName:
+    Type: String
+
+  RegistryId:
+    Type: String
+    Default: 508547968749
+
+  ImageRepositoryRegion:
+    Type: String
+
+  ImageRepository:
+    Type: String
+
+  ImageTag:
+    Type: String
+
+  Memory:
+    Type: Number
+
+  CPU:
+    Type: Number
+
+  MinCapacity:
+    Type: Number
+
+  MaxCapacity:
+    Type: Number
+
+  TargetRequestCountPerTarget:
+    Type: Number
+
+  ContainerCmd:
+    Type: String
+
+  ScaleInCooldown:
+    Type: Number
+
+  ScaleOutCooldown:
+    Type: Number
+
+  RestrictExternalAccess:
+    Type: String
+
+  HttpToHttpsRedirect:
+    Type: String
+
+  ExternalCertificateArn:
+    Type: String
+
+  TypeTag:
+    Type: String
+
+  EnvTag:
+    Type: String
+
+  HealthCheckTimeoutSeconds:
+    Type: Number
+
+  HealthyThresholdCount:
+    Type: Number
+
+  UnhealthyThresholdCount:
+    Type: Number
+
+  DeregistrationDelayTimeoutSeconds:
+    Type: Number
+
+  SslPolicy:
+    Type: String
+
+Resources:
+  Logging:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: logging.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+
+  IAM:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: iam-without-database.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+
+  SecurityGroups:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: security-groups.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        RestrictExternalAccess: !Ref RestrictExternalAccess
+        HttpToHttpsRedirect: !Ref HttpToHttpsRedirect
+
+  InternetFacingLoadBalancer:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: internet-facing-load-balancer.template.yaml
+      Parameters:
+        ExternalCertificateArn: !Ref ExternalCertificateArn
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+        SecurityGroupId: !GetAtt SecurityGroups.Outputs.LoadBalancerSecurityGroupId
+        HealthCheckPath: !Ref HealthCheckPath
+        HealthCheckStatusCodes: !Ref HealthCheckStatusCodes
+        InternalCertificateExpirationDate: !Ref InternalCertificateExpirationDate
+        SigningCertificate: !Ref SigningCertificate
+        KMSKeyId: !ImportValue shared:kms:KeyId
+        OrganizationID: !Ref OrganizationID
+        HttpToHttpsRedirect: !Ref HttpToHttpsRedirect
+        TypeTag: !Ref TypeTag
+        EnvTag: !Ref EnvTag
+        HealthCheckTimeoutSeconds: !Ref HealthCheckTimeoutSeconds
+        HealthyThresholdCount: !Ref HealthyThresholdCount
+        UnhealthyThresholdCount: !Ref UnhealthyThresholdCount
+        DeregistrationDelayTimeoutSeconds: !Ref DeregistrationDelayTimeoutSeconds
+        SslPolicy: !Ref SslPolicy
+
+  CloudwatchAlarms:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: cloudwatch-alarms.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+
+  CWCDonaWebsiteAliasRecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !GetAtt InternetFacingLoadBalancer.Outputs.DNSName
+        EvaluateTargetHealth: false
+        HostedZoneId: !GetAtt InternetFacingLoadBalancer.Outputs.CanonicalHostedZoneID
+      HostedZoneId: !ImportValue dns:TopHostedZoneId
+      Name: !Sub
+        - ${ServiceKey}.${HostedZoneName}
+        - HostedZoneName:
+            Fn::ImportValue: dns:TopHostedZoneName
+      Type: A
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Ref ServiceKey
+      Cpu: !Ref CPU
+      Memory: !Ref Memory
+      ExecutionRoleArn: !Sub arn:aws:iam::${AWS::AccountId}:role/${ECSTaskExecutionRoleName}
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      TaskRoleArn: !GetAtt IAM.Outputs.ServiceRoleArn
+      ContainerDefinitions:
+        - Name: !Ref ServiceKey
+          Image: !Sub ${RegistryId}.dkr.ecr.${ImageRepositoryRegion}.${AWS::URLSuffix}/${ImageRepository}@${ImageTag}
+          Memory: !Ref Memory
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !GetAtt Logging.Outputs.LogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: !Ref ServiceKey
+          PortMappings:
+            - ContainerPort: 443
+          Cpu: !Ref CPU
+          ReadonlyRootFilesystem: true
+          Essential: true
+          Command:
+            - /bin/bash
+            - -c
+            - !Sub 'eval $(AWS_ENV_PATH=/${NeighborhoodKey}/shared/ aws-env) && eval $(AWS_ENV_PATH=/${NeighborhoodKey}/${ServiceKey}/ aws-env) && ${ContainerCmd}'
+          Environment:
+            - Name: AWS_REGION
+              Value: !Ref AWS::Region
+            - Name: HOST
+              Value: !Ref CWCDonaWebsiteAliasRecordSet
+
+  Service:
+    Type: AWS::ECS::Service
+    Properties:
+      ServiceName: !Ref ServiceKey
+      Cluster: !Sub ${NeighborhoodKey}
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          SecurityGroups:
+            - !GetAtt SecurityGroups.Outputs.ServiceSecurityGroupId
+          Subnets: !Split
+            - ','
+            - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:network:PrivateSubnets
+      DesiredCount: !Ref MinCapacity
+      LoadBalancers:
+        - ContainerName: !Ref ServiceKey
+          ContainerPort: 443
+          TargetGroupArn: !GetAtt InternetFacingLoadBalancer.Outputs.TargetGroup
+      TaskDefinition: !Ref TaskDefinition
+
+  ScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxCapacity
+      MinCapacity: !Ref MinCapacity
+      ResourceId: !Sub service/${NeighborhoodKey}/${Service.Name}
+      RoleARN: !Sub arn:aws:iam::${AWS::AccountId}:role/${ApplicationAutoscalingECSServiceRoleName}
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  ScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: TargetTrackingScalingPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref ScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ALBRequestCountPerTarget
+          ResourceLabel: !Sub
+            - ${LoadBalancerFullName}/${TargetGroupFullName}
+            - LoadBalancerFullName: !GetAtt InternetFacingLoadBalancer.Outputs.LoadBalancerFullName
+              TargetGroupFullName: !GetAtt InternetFacingLoadBalancer.Outputs.TargetGroupFullName
+        ScaleInCooldown: !Ref ScaleInCooldown
+        ScaleOutCooldown: !Ref ScaleOutCooldown
+        TargetValue: !Ref TargetRequestCountPerTarget
+
+Outputs:
+  ServiceRoleName:
+    Value: !GetAtt IAM.Outputs.ServiceRoleName

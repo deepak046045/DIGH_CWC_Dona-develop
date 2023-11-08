@@ -1,0 +1,142 @@
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/breakpoints';
+@import '../../scss/themes/colors';
+@import '../../scss/themes/typography.module';
+@import '../../scss/themes/input.module';
+
+.AddAppointment {
+  padding: 2.4rem 0 0;
+  @include ScreenSizeSmall(true) {
+    padding: 0 1rem 0;
+  }
+  &__title {
+    @extend .themeTypographyH1;
+    color: $theme-color-darker-gray;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    @include ScreenSizeSmall(true) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__text {
+    @extend .themeTypographyBody;
+    text-align: center;
+    color: $theme-color-light-black;
+    margin-bottom: 2.4rem;
+    @include ScreenSizeSmall(true) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__form {
+    &_radio_inputs_landscape {
+      --lds-spacing-radio-margin-right: 12px;
+      --lds-spacing-fieldset-checkbox-margin-left: 0;
+      --lds-spacing-fieldset-checkbox-margin-bottom: 0;
+      --lds-spacing-fieldset-checkbox-margin-top: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 1.5rem;
+      @extend .inputSpacing;
+      flex-wrap: wrap;
+      &_error {
+        width: 100%;
+        margin: 0 0 0.125rem;
+      }
+      @include ScreenSizeSmall(true) {
+        display: none;
+      }
+    }
+    &_select_input {
+      @extend .inputSpacing;
+      display: none;
+      @include ScreenSizeSmall(true) {
+        display: block;
+      }
+    }
+    &_text_input {
+      @extend .inputSpacing;
+      &_third {
+        width: 30%;
+        @include ScreenSizeSmall(true) {
+          width: 50%;
+        }
+      }
+    }
+    &_schedule {
+      display: flex;
+      gap: 2.125rem;
+      @extend .inputSpacing;
+      @include ScreenSizeSmall(true) {
+        flex-direction: column;
+        gap: 0;
+      }
+      &_date_picker {
+        width: 37%;
+        &.error {
+          input {
+            border-color: var(--lds-color-select-error-border);
+            background-color: var(--lds-color-select-error-bg);
+          }
+        }
+        @include ScreenSizeSmall(true) {
+          width: 44%;
+          min-width: 200px;
+        }
+      }
+      &_time_picker {
+        width: 30%;
+        @include ScreenSizeSmall(true) {
+          width: 41%;
+          min-width: 200px;
+        }
+      }
+    }
+    &_checkbox_group {
+      margin-top: 14px;
+      &_check  {
+        --lds-spacing-fieldset-checkbox-margin-left: 0;
+        --lds-spacing-fieldset-checkbox-margin-top: 0;
+        --lds-spacing-fieldset-checkbox-margin-bottom: 0;
+        --lds-spacing-checkbox-margin-right: 9px;
+        margin-bottom: 1rem;
+      }
+      &_add_btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 1.5rem 0 2.7rem -2px;
+        &_icon {
+          display: inline-block;
+          margin-right: 8px;
+        }
+        &_text {
+          @extend .themeTypographyBody;
+          color: $theme-color-primary;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+    &_buttons_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      margin: 0 0 3.5rem 0;
+      flex-direction: row-reverse;
+      @include ScreenSizeSmall(true) {
+        display: block;
+      }
+    }
+    &_buttons {
+      @include ScreenSizeSmall(true) {
+        width: 100%;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

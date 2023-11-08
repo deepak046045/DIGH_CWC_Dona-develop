@@ -1,0 +1,72 @@
+@import '../../scss/abstracts/mixins';
+
+.form {
+  display: block;
+  gap: 20px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 0 1rem 0 1rem;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.closeModalButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.closeModalButton {
+  border: none;
+  background: none;
+}
+
+.closeIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.closeAnywayButton {
+  --lds-color-button-background: #FEF5E8 !important;
+}
+
+.modal {
+  --lds-spacing-modal-body-padding-top: 0;
+  --lds-spacing-modal-body-padding-left: 0;
+  --lds-spacing-modal-body-padding-right: 0;
+}
+
+.notSavedAlert :global(.lds-alert-message) {
+  display: flex;
+  align-items: center;
+}
+
+.notSavedAlert :global(.lds-alert .lds-icon.lds-alert-icon) {
+  position: initial;
+  margin-right: 1rem;
+  height: 24px;
+  width: 24px;
+
+  @include ScreenSizeSmall(true) {
+    position: absolute;
+    margin-right: 0;
+  }
+}
+
+.notSavedAlertContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 1rem;
+
+  @include ScreenSizeSmall(true) {
+    flex-direction: column;
+  }
+}

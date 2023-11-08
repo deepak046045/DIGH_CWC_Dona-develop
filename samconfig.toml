@@ -1,0 +1,15 @@
+version = 0.1
+
+[dev.deploy.parameters]
+stack_name = "DELTA-CWC-Dona"
+s3_bucket = "cfn-templates-lillydh-dev-us-east-1"
+s3_prefix = "digh-cwc-dona"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_AUTO_EXPAND CAPABILITY_IAM"
+parameter_overrides = [
+  "NeighborhoodKey=delta",
+  "InternalCertificateExpirationDate=2024-03-01",
+  "SigningCertificate=RootCert1",
+  "ExternalCertificateArn=arn:aws:acm:us-east-1:396262270423:certificate/456a8e9d-ff2c-4d35-a5c9-1d532ee2e0ab"
+]

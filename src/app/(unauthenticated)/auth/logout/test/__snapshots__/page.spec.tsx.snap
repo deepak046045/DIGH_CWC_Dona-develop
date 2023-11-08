@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logout Page should render when authenticated 1`] = `
+<div>
+  <div
+    class="logout-container"
+  >
+    <h1>
+      Redirecting to logout...
+    </h1>
+    <lds-loading-spinner
+      animationspeed="1000"
+      arialabel="loading"
+      size="40"
+    />
+  </div>
+</div>
+`;
+
+exports[`Logout Page should render when unauthenticated 1`] = `
+<div>
+  <div
+    class="lds-card"
+  >
+    <div
+      class="content-container"
+    >
+      <h1>
+        You have been signed out.
+      </h1>
+    </div>
+    <div
+      class="h2-container"
+    >
+      <h2>
+        To continue using this site, you will need to sign in again.
+      </h2>
+    </div>
+  </div>
+</div>
+`;

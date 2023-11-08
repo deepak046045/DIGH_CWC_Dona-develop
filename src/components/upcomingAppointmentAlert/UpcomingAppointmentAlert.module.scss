@@ -1,0 +1,24 @@
+@import '@/scss/themes/colors';
+
+.closeIconWhite {
+  fill: white !important;
+}
+
+.infoIcon {
+  min-height: 24px;
+  min-width: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.upcomingAppointmentAlertLink {
+  --lds-color-link-foreground: #{$theme-color-secondary};
+}
+
+.alert {
+  display: flex;
+}
+
+.alertContent {
+  padding-left: 1rem;
+}

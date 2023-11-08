@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddAppointmentConfirmationModal should render 1`] = `
+<div>
+  <div
+    class="primary modal"
+  >
+    <div
+      class="lds-modal open"
+      id="addCarePartnerModal"
+    >
+      <div
+        class="wrapper"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-12 col-md-9"
+          >
+            <div
+              aria-labelledby=""
+              aria-modal="true"
+              class="lds-modal-window"
+              role="dialog"
+            >
+              <div
+                class="lds-modal-body"
+              >
+                <div
+                  class="closeModalButtonWrapper"
+                >
+                  <button
+                    class="closeModalButton"
+                    data-testid="add-appointment-confirmation-x-button"
+                    type="button"
+                  >
+                    <svg
+                      aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                      class="lds-icon icon-X closeIcon"
+                      focusable="false"
+                      role="img"
+                    >
+                      <title
+                        id="lds-icon-X-title-123456789"
+                      >
+                        X
+                      </title>
+                      <desc
+                        id="lds-icon-X-description-123456789"
+                      />
+                      <svg
+                        viewBox="0 0 256 256"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                        />
+                      </svg>
+                    </svg>
+                  </button>
+                </div>
+                <h2
+                  class="modalTitle"
+                >
+                  Your appointment has been saved.
+                </h2>
+                <div
+                  class="modalActions"
+                >
+                  <button
+                    class="lds-button secondary"
+                    data-testid="add-new-appointment-btn"
+                    type="button"
+                  >
+                    Add new appointment
+                  </button>
+                  <button
+                    class="lds-button primary"
+                    data-testid="view-appointments-btn"
+                    type="button"
+                  >
+                    View my appointments
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

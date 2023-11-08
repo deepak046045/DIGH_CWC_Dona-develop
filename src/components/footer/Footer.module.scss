@@ -1,0 +1,90 @@
+@import '@/scss/themes/colors';
+@import '@/scss/abstracts/mixins';
+
+.supportInfo {
+  @include ScreenSizeXXL(true) {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
+.mobileSupportInfo {
+  @include ScreenSizeXXL(true) {
+    display: none;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: block;
+  }
+}
+
+.desktopSupportInfo {
+  @include ScreenSizeXXL(true) {
+    display: block;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: none;
+  }
+}
+
+.legalInfo {
+  @include ScreenSizeXXL(true) {
+    display: flex;
+    justify-content: space-between;  
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: block;
+  }
+}
+
+.white {
+  color: $theme-color-white;
+}
+
+.desktopButton {
+  @include ScreenSizeXXL(true) {
+    display: flex;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: none;
+  }
+}
+
+.mobileButton {
+  @include ScreenSizeXXL(true) {
+    display: none;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: block;
+    justify-content: center;
+    padding-bottom: 32px;
+    width: 100%;
+  }
+}
+ 
+.footer {
+  background-color: $theme-color-darker-gray;
+}
+
+.footer :global(.lds-footer-social-icons) {
+  @include ScreenSizeXXL(true) {
+    display: block;
+  }
+
+  @include ScreenSizeSmall(true) {
+    display: none;
+  }
+}

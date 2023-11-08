@@ -1,0 +1,287 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  RestrictExternalAccess:
+    Type: String
+    AllowedValues:
+      - 'true'
+      - 'false'
+
+  HttpToHttpsRedirect:
+    Type: String
+    AllowedValues:
+      - 'true'
+      - 'false'
+
+Conditions:
+  RestrictExternalAccess: !Equals [!Ref RestrictExternalAccess, 'true']
+  AllowPublicHttps: !Equals [!Ref RestrictExternalAccess, 'false']
+  AllowPublicHttp:
+    !And [
+      !Equals [!Ref HttpToHttpsRedirect, 'true'],
+      !Equals [!Ref RestrictExternalAccess, 'false'],
+    ]
+  AllowRestrictedHttp:
+    !And [
+      !Equals [!Ref HttpToHttpsRedirect, 'true'],
+      !Equals [!Ref RestrictExternalAccess, 'true'],
+    ]
+
+Resources:
+  # Load Balancer
+  LoadBalancerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Service Load Balancer Security Group
+      VpcId:
+        Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:network:VpcId
+
+  LoadBalancerSecurityGroupIngressHTTPS:
+    Condition: AllowPublicHttps
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  LoadBalancerSecurityGroupIngressHTTP:
+    Condition: AllowPublicHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromSEP:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 4.4.60.122/32
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromSEP:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 4.4.60.122/32
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromSEPBackup:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 216.37.52.130/32
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromSEPBackup:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 216.37.52.130/32
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromLillyProxy1:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.0.0.0/10
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromLillyProxy1:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.0.0.0/10
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromLillyProxy2:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.144.0.0/12
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromLillyProxy2:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.144.0.0/12
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromLillyProxy3:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.160.0.0/11
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromLillyProxy3:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.160.0.0/11
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromLillyProxy4:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.192.0.0/10
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromLillyProxy4:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 40.192.0.0/10
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromDeloitte5:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 103.76.232.0/24
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromDeloitte5:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 103.76.232.0/24
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  SecurityGroupIngressHTTPSFromDeloitte8:
+    Condition: RestrictExternalAccess
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 167.219.0.0/16
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  SecurityGroupIngressHTTPFromDeloitte8:
+    Condition: AllowRestrictedHttp
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      CidrIp: 167.219.0.0/16
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  LoadBalancerSecurityGroupEgressECSService:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: !Ref LoadBalancerSecurityGroup
+      DestinationSecurityGroupId: !Ref ECSClusterSecurityGroup
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  # ECS Service
+  ECSClusterSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Service ECS Cluster Security Group
+      VpcId:
+        Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:network:VpcId
+
+  ECSClusterSecurityGroupIngressLoadBalancer:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref ECSClusterSecurityGroup
+      SourceSecurityGroupId: !Ref LoadBalancerSecurityGroup
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  ECSClusterSecurityGroupEgressHTTP:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: !Ref ECSClusterSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: tcp
+      FromPort: 80
+      ToPort: 80
+
+  ECSClusterSecurityGroupEgressHTTPS:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: !Ref ECSClusterSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: tcp
+      FromPort: 443
+      ToPort: 443
+
+  ECSClusterSecurityGroupEgressHTTPSAlternate:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: !Ref ECSClusterSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: tcp
+      FromPort: 8443
+      ToPort: 8443
+
+Outputs:
+  LoadBalancerSecurityGroupId:
+    Value: !Ref LoadBalancerSecurityGroup
+
+  ECSClusterSecurityGroupId:
+    Value: !Ref ECSClusterSecurityGroup
+
+  ServiceSecurityGroupId:
+    Value: !Ref ECSClusterSecurityGroup

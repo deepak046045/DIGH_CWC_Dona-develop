@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhatToExpect Page should render page 1`] = `
+<div>
+  <div>
+    What to expect page
+  </div>
+</div>
+`;

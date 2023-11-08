@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreatmentDownload should render page when logged in 1`] = `
+<div>
+  <div
+    class="TreatmentDownload gutter"
+  >
+    <p
+      class="TreatmentDownload__text"
+    >
+      Print or save your Treatment Plan as a PDF
+      <button
+        class="lds-button TreatmentDownload__map-download-btn"
+        data-testid="print-button"
+        type="button"
+      >
+        Print My Plan
+        <img
+          alt="Printer Icon Download Button"
+          class="TreatmentDownload__map-download-btn-icon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/printer-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </button>
+    </p>
+    <div
+      class="TreatmentDownload__divider"
+    >
+      <lds-hr />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TreatmentDownload should render the page when not logged in 1`] = `
+<div>
+  <div
+    class="TreatmentDownload gutter"
+  >
+    <p
+      class="TreatmentDownload__text"
+    >
+      Always follow your doctor’s directions. Insurance approval may be needed or the start of your infusion therapy may be delayed.
+    </p>
+    <p
+      class="TreatmentDownload__text"
+    >
+      For a printable version of the treatment map download the following.
+      <button
+        class="lds-button TreatmentDownload__map-download-btn"
+        data-testid="download-button"
+        type="button"
+      >
+        Treatment Map PDF
+        <img
+          alt="Download Icon"
+          class="TreatmentDownload__map-download-btn-icon"
+          data-nimg="1"
+          decoding="async"
+          height="19"
+          loading="lazy"
+          src="/icons/download-full-icon.svg"
+          style="color: transparent;"
+          width="19"
+        />
+      </button>
+    </p>
+    <div
+      class="TreatmentDownload__divider"
+    >
+      <lds-hr />
+    </div>
+  </div>
+</div>
+`;

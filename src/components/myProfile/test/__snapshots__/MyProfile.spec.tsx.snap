@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My Profile Component should render my profile view 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="title"
+    >
+      My profile
+    </div>
+    <div
+      class="mainContainer"
+    >
+      <div
+        class="profileIconContainer"
+      >
+        <img
+          alt="ProfileIcon"
+          data-nimg="1"
+          decoding="async"
+          height="29"
+          loading="lazy"
+          src="/icons/profile-icon.svg"
+          style="color: transparent;"
+          width="29"
+        />
+        <div
+          class="profileIconDescription"
+        >
+          Elizabeth Brown
+        </div>
+      </div>
+      <div
+        class="detailsContainer"
+      >
+        <div
+          class="detailsHeader"
+        >
+          FIRST NAME
+        </div>
+        <div
+          class="detailsValue"
+        >
+          Elizabeth
+        </div>
+        <lds-hr
+          color="#ADB3B8"
+        />
+      </div>
+      <div
+        class="detailsContainer"
+      >
+        <div
+          class="detailsHeader"
+        >
+          LAST NAME
+        </div>
+        <div
+          class="detailsValue"
+        >
+          Brown
+        </div>
+        <lds-hr
+          color="#ADB3B8"
+        />
+      </div>
+      <div
+        class="detailsContainer"
+      >
+        <div
+          class="detailsHeader"
+        >
+          DATE OF BIRTH
+        </div>
+        <div
+          class="detailsValue"
+        >
+          01/01/1990
+        </div>
+        <lds-hr
+          color="#ADB3B8"
+        />
+      </div>
+      <div
+        class="detailsContainer"
+      >
+        <div
+          class="detailsHeader"
+        >
+          EMAIL ADDRESS
+        </div>
+        <div
+          class="detailsValue"
+        >
+          elizabethbrown@mail.com
+        </div>
+        <lds-hr
+          color="#ADB3B8"
+        />
+      </div>
+      <div
+        class="detailsContainer"
+      >
+        <div
+          class="detailsHeader"
+        >
+          MOBILE PHONE NUMBER
+        </div>
+        <div
+          class="detailsValue"
+        >
+          (123) 456-7890
+        </div>
+        <lds-hr
+          color="#ADB3B8"
+        />
+      </div>
+      <div
+        class="deleteContainer"
+      >
+        <button
+          class="deleteIconButton"
+          type="button"
+        >
+          <img
+            alt="DeleteIcon"
+            data-nimg="1"
+            decoding="async"
+            height="19"
+            loading="lazy"
+            src="/icons/delete-icon.svg"
+            style="color: transparent;"
+            width="19"
+          />
+          <div
+            class="deleteButtonLink"
+          >
+            Delete Account
+          </div>
+        </button>
+        <div
+          class="deleteDescription"
+        >
+          Deleting your account only unregisters you from [sitename]. It does not affect your infusions. To stop taking Kisunla, talk to your doctor.
+        </div>
+      </div>
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmation-modal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Your account will be deleted
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    You and your care partners will lose access to your treatment plan, appointments and appointment reminders.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

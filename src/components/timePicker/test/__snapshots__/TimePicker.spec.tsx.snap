@@ -1,0 +1,650 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Time Picker Component should render TimePicker component 1`] = `
+<div>
+  <div
+    class="lds-select-wrapper"
+  >
+    <label
+      class="lds-form-label"
+      for="undefined-timepicker-id-button"
+    >
+      <div>
+        <label
+          class="label"
+          for="undefined-timepicker-id"
+        />
+        <p
+          class="hint"
+        />
+      </div>
+    </label>
+    <div
+      class="lds-select-input-wrapper"
+    >
+      <input
+        id="undefined-timepicker-id"
+        type="hidden"
+        value="-1"
+      />
+      <button
+        aria-describedby="undefined-timepicker-id-option-btn-0"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-invalid="false"
+        aria-required="false"
+        class="button-clear-style lds-select"
+        id="undefined-timepicker-id-button"
+        tabindex="0"
+      >
+        Select Time
+        <lds-icon
+          aria-hidden="true"
+          class="caret-down"
+          name="CaretDown"
+        />
+      </button>
+      <div
+        aria-hidden="true"
+        class="lds-select-options"
+        role="listbox"
+      >
+        <button
+          class="lds-button-clear-style lds-select-option selected"
+          data-option="undefined-timepicker-id-option-btn--1"
+          id="undefined-timepicker-id-option-btn-0"
+          role="option"
+          tabindex="-1"
+        >
+          Select Time
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-5"
+          id="undefined-timepicker-id-option-btn-1"
+          role="option"
+          tabindex="-1"
+        >
+          05:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-5.15"
+          id="undefined-timepicker-id-option-btn-2"
+          role="option"
+          tabindex="-1"
+        >
+          05:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-5.3"
+          id="undefined-timepicker-id-option-btn-3"
+          role="option"
+          tabindex="-1"
+        >
+          05:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-5.45"
+          id="undefined-timepicker-id-option-btn-4"
+          role="option"
+          tabindex="-1"
+        >
+          05:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-6"
+          id="undefined-timepicker-id-option-btn-5"
+          role="option"
+          tabindex="-1"
+        >
+          06:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-6.15"
+          id="undefined-timepicker-id-option-btn-6"
+          role="option"
+          tabindex="-1"
+        >
+          06:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-6.3"
+          id="undefined-timepicker-id-option-btn-7"
+          role="option"
+          tabindex="-1"
+        >
+          06:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-6.45"
+          id="undefined-timepicker-id-option-btn-8"
+          role="option"
+          tabindex="-1"
+        >
+          06:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-7"
+          id="undefined-timepicker-id-option-btn-9"
+          role="option"
+          tabindex="-1"
+        >
+          07:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-7.15"
+          id="undefined-timepicker-id-option-btn-10"
+          role="option"
+          tabindex="-1"
+        >
+          07:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-7.3"
+          id="undefined-timepicker-id-option-btn-11"
+          role="option"
+          tabindex="-1"
+        >
+          07:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-7.45"
+          id="undefined-timepicker-id-option-btn-12"
+          role="option"
+          tabindex="-1"
+        >
+          07:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-8"
+          id="undefined-timepicker-id-option-btn-13"
+          role="option"
+          tabindex="-1"
+        >
+          08:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-8.15"
+          id="undefined-timepicker-id-option-btn-14"
+          role="option"
+          tabindex="-1"
+        >
+          08:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-8.3"
+          id="undefined-timepicker-id-option-btn-15"
+          role="option"
+          tabindex="-1"
+        >
+          08:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-8.45"
+          id="undefined-timepicker-id-option-btn-16"
+          role="option"
+          tabindex="-1"
+        >
+          08:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-9"
+          id="undefined-timepicker-id-option-btn-17"
+          role="option"
+          tabindex="-1"
+        >
+          09:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-9.15"
+          id="undefined-timepicker-id-option-btn-18"
+          role="option"
+          tabindex="-1"
+        >
+          09:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-9.3"
+          id="undefined-timepicker-id-option-btn-19"
+          role="option"
+          tabindex="-1"
+        >
+          09:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-9.45"
+          id="undefined-timepicker-id-option-btn-20"
+          role="option"
+          tabindex="-1"
+        >
+          09:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-10"
+          id="undefined-timepicker-id-option-btn-21"
+          role="option"
+          tabindex="-1"
+        >
+          10:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-10.15"
+          id="undefined-timepicker-id-option-btn-22"
+          role="option"
+          tabindex="-1"
+        >
+          10:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-10.3"
+          id="undefined-timepicker-id-option-btn-23"
+          role="option"
+          tabindex="-1"
+        >
+          10:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-10.45"
+          id="undefined-timepicker-id-option-btn-24"
+          role="option"
+          tabindex="-1"
+        >
+          10:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-11"
+          id="undefined-timepicker-id-option-btn-25"
+          role="option"
+          tabindex="-1"
+        >
+          11:00 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-11.15"
+          id="undefined-timepicker-id-option-btn-26"
+          role="option"
+          tabindex="-1"
+        >
+          11:15 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-11.3"
+          id="undefined-timepicker-id-option-btn-27"
+          role="option"
+          tabindex="-1"
+        >
+          11:30 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-11.45"
+          id="undefined-timepicker-id-option-btn-28"
+          role="option"
+          tabindex="-1"
+        >
+          11:45 AM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-12"
+          id="undefined-timepicker-id-option-btn-29"
+          role="option"
+          tabindex="-1"
+        >
+          12:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-12.15"
+          id="undefined-timepicker-id-option-btn-30"
+          role="option"
+          tabindex="-1"
+        >
+          12:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-12.3"
+          id="undefined-timepicker-id-option-btn-31"
+          role="option"
+          tabindex="-1"
+        >
+          12:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-12.45"
+          id="undefined-timepicker-id-option-btn-32"
+          role="option"
+          tabindex="-1"
+        >
+          12:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-13"
+          id="undefined-timepicker-id-option-btn-33"
+          role="option"
+          tabindex="-1"
+        >
+          01:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-13.15"
+          id="undefined-timepicker-id-option-btn-34"
+          role="option"
+          tabindex="-1"
+        >
+          01:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-13.3"
+          id="undefined-timepicker-id-option-btn-35"
+          role="option"
+          tabindex="-1"
+        >
+          01:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-13.45"
+          id="undefined-timepicker-id-option-btn-36"
+          role="option"
+          tabindex="-1"
+        >
+          01:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-14"
+          id="undefined-timepicker-id-option-btn-37"
+          role="option"
+          tabindex="-1"
+        >
+          02:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-14.15"
+          id="undefined-timepicker-id-option-btn-38"
+          role="option"
+          tabindex="-1"
+        >
+          02:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-14.3"
+          id="undefined-timepicker-id-option-btn-39"
+          role="option"
+          tabindex="-1"
+        >
+          02:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-14.45"
+          id="undefined-timepicker-id-option-btn-40"
+          role="option"
+          tabindex="-1"
+        >
+          02:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-15"
+          id="undefined-timepicker-id-option-btn-41"
+          role="option"
+          tabindex="-1"
+        >
+          03:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-15.15"
+          id="undefined-timepicker-id-option-btn-42"
+          role="option"
+          tabindex="-1"
+        >
+          03:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-15.3"
+          id="undefined-timepicker-id-option-btn-43"
+          role="option"
+          tabindex="-1"
+        >
+          03:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-15.45"
+          id="undefined-timepicker-id-option-btn-44"
+          role="option"
+          tabindex="-1"
+        >
+          03:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-16"
+          id="undefined-timepicker-id-option-btn-45"
+          role="option"
+          tabindex="-1"
+        >
+          04:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-16.15"
+          id="undefined-timepicker-id-option-btn-46"
+          role="option"
+          tabindex="-1"
+        >
+          04:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-16.3"
+          id="undefined-timepicker-id-option-btn-47"
+          role="option"
+          tabindex="-1"
+        >
+          04:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-16.45"
+          id="undefined-timepicker-id-option-btn-48"
+          role="option"
+          tabindex="-1"
+        >
+          04:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-17"
+          id="undefined-timepicker-id-option-btn-49"
+          role="option"
+          tabindex="-1"
+        >
+          05:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-17.15"
+          id="undefined-timepicker-id-option-btn-50"
+          role="option"
+          tabindex="-1"
+        >
+          05:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-17.3"
+          id="undefined-timepicker-id-option-btn-51"
+          role="option"
+          tabindex="-1"
+        >
+          05:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-17.45"
+          id="undefined-timepicker-id-option-btn-52"
+          role="option"
+          tabindex="-1"
+        >
+          05:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-18"
+          id="undefined-timepicker-id-option-btn-53"
+          role="option"
+          tabindex="-1"
+        >
+          06:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-18.15"
+          id="undefined-timepicker-id-option-btn-54"
+          role="option"
+          tabindex="-1"
+        >
+          06:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-18.3"
+          id="undefined-timepicker-id-option-btn-55"
+          role="option"
+          tabindex="-1"
+        >
+          06:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-18.45"
+          id="undefined-timepicker-id-option-btn-56"
+          role="option"
+          tabindex="-1"
+        >
+          06:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-19"
+          id="undefined-timepicker-id-option-btn-57"
+          role="option"
+          tabindex="-1"
+        >
+          07:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-19.15"
+          id="undefined-timepicker-id-option-btn-58"
+          role="option"
+          tabindex="-1"
+        >
+          07:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-19.3"
+          id="undefined-timepicker-id-option-btn-59"
+          role="option"
+          tabindex="-1"
+        >
+          07:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-19.45"
+          id="undefined-timepicker-id-option-btn-60"
+          role="option"
+          tabindex="-1"
+        >
+          07:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-20"
+          id="undefined-timepicker-id-option-btn-61"
+          role="option"
+          tabindex="-1"
+        >
+          08:00 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-20.15"
+          id="undefined-timepicker-id-option-btn-62"
+          role="option"
+          tabindex="-1"
+        >
+          08:15 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-20.3"
+          id="undefined-timepicker-id-option-btn-63"
+          role="option"
+          tabindex="-1"
+        >
+          08:30 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-20.45"
+          id="undefined-timepicker-id-option-btn-64"
+          role="option"
+          tabindex="-1"
+        >
+          08:45 PM
+        </button>
+        <button
+          class="lds-button-clear-style lds-select-option"
+          data-option="undefined-timepicker-id-option-btn-21"
+          id="undefined-timepicker-id-option-btn-65"
+          role="option"
+          tabindex="-1"
+        >
+          09:00 PM
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

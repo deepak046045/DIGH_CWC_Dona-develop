@@ -1,0 +1,85 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  ServiceKey:
+    Type: String
+
+Resources:
+  ServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: !Sub /lc3/${NeighborhoodKey}/${ServiceKey}/
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: ReadParameters
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ssm:GetParametersByPath
+                  - ssm:GetParameter
+                Resource:
+                  - !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${NeighborhoodKey}/shared/*
+                  - !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${NeighborhoodKey}/${ServiceKey}/*
+              - Effect: Allow
+                Action: s3:GetObject
+                Resource:
+                  - !Sub
+                    - ${ResourceBucketArn}/shared/*
+                    - ResourceBucketArn:
+                        Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:ResourceBucketArn
+                  - !Sub
+                    - ${ResourceBucketArn}/${ServiceKey}/*
+                    - ResourceBucketArn:
+                        Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:ResourceBucketArn
+              - Effect: Allow
+                Action: kms:Decrypt
+                Resource:
+                  - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:kms:KeyArn
+                  - Fn::ImportValue: shared:kms:KeyArn
+        - PolicyName: SNSEvent
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sns:GetTopicAttributes
+                  - sns:SetTopicAttributes
+                  - sns:AddPermission
+                  - sns:RemovePermission
+                  - sns:DeleteTopic
+                  - sns:Subscribe
+                  - sns:ListSubscriptionsByTopic
+                  - sns:Publish
+                  - sns:Receive
+                Resource:
+                  Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:LC3EventSNSTopic
+        - PolicyName: SNSEventKMS
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kms:*
+                Resource:
+                  Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:kms:LC3EventKeyArn
+
+Outputs:
+  ServiceRoleArn:
+    Value: !GetAtt ServiceRole.Arn
+
+  ServiceRoleName:
+    Value: !Ref ServiceRole

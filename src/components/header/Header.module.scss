@@ -1,0 +1,62 @@
+@import '@/scss/themes/colors';
+
+.grayBar {
+  background-color: #adb3b7;
+  justify-content: center;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.buttonDivider {
+  border-color: #212121;
+}
+
+.navigationButton,
+.navigationButtonActive {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background-color: #5b6771;
+  border: 3px solid transparent;
+  text-transform: none;
+  color: #ecedeb;
+
+  /* Should be replaced with typography when LDS integrated */
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.navigationButtonActive {
+  font-weight: 900;
+  background-color: #{$theme-color-primary};
+  color: #{$theme-color-white};
+}
+
+.navigationButton {
+  font-weight: 600;
+}
+
+.navigationButton:hover {
+  color: #212121;
+  background-color: #e3e6e9;
+  text-decoration: underline;
+}
+
+.navigationButton:focus {
+  color: #000000;
+  background-color: #d6d9db;
+  text-decoration: underline;
+  border: 3px solid var(--neutral-600, #757575);
+}
+
+.navigationButtonActive:hover,
+.navigationButtonActive:focus {
+  background-color: #c25400;
+  color: #ffffff;
+  text-decoration: none;
+}
+

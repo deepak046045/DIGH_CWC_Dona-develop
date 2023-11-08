@@ -1,0 +1,4 @@
+Version: '0.3'
+ArtifactKey: digh-cwc-dona
+DeploymentType: CloudFormation
+UsePipelineQueue: true

@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreatmentMap Page should render page 1`] = `
+<div>
+  <div
+    class="primary"
+    id="test"
+  />
+  <div
+    class="background"
+  >
+    <div
+      class="welcomeSection gutter"
+    >
+      <div
+        class="image_wrapper"
+      >
+        <img
+          alt="ElderlyGroupSmiling"
+          class="image"
+          src="/images/elderly-group-smiling.png"
+        />
+      </div>
+      <div
+        class="welcomeSectionRightSide"
+      >
+        <div
+          class="welcomeSectionHeaderText themeTypographyH1"
+        >
+          Welcome to Kisunla support.
+        </div>
+        <div
+          class="welcomeSectionSubHeaderText"
+        >
+          Support resources for your treatment journey. Register to set up a
+      calendar of appointments, set up reminders, and assign care
+      partners.
+        </div>
+        <button
+          class="lds-button primary"
+          data-testid="sign-up-button"
+          type="button"
+        >
+          Sign up now
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="TreatmentIntro gutter"
+  >
+    <h2
+      class="TreatmentIntro__title"
+    >
+      Recommended treatment
+    </h2>
+    <p
+      class="TreatmentIntro__subtitle"
+    >
+      Setting you up for success in your treatment. Setting you up for success in your treatment.
+    </p>
+    <div
+      class="TreatmentIntro__wrapper"
+    >
+      <p
+        class="TreatmentIntro__text"
+      >
+        This treatment map serves as a suggested guide. Always follow your doctor’s directions. Insurance approval may be needed or the start of your infusion therapy may be delayed.
+      </p>
+    </div>
+  </div>
+  <div
+    class="TreatmentMapList gutter"
+    style="border-top: 1px solid black; border-bottom: 1px solid black; background: lightgrey; color: white; display: flex; align-content: center; justify-content: center; padding: 20px 0px;"
+  >
+    <p
+      style="text-align: center; margin: 0px;"
+    >
+      Treatment Map List Placeholder
+    </p>
+  </div>
+  <div
+    class="TreatmentDownload gutter"
+  >
+    <p
+      class="TreatmentDownload__text"
+    >
+      Always follow your doctor’s directions. Insurance approval may be needed or the start of your infusion therapy may be delayed.
+    </p>
+    <p
+      class="TreatmentDownload__text"
+    >
+      For a printable version of the treatment map download the following.
+      <button
+        class="lds-button TreatmentDownload__map-download-btn"
+        data-testid="download-button"
+        type="button"
+      >
+        Treatment Map PDF
+        <img
+          alt="Download Icon"
+          class="TreatmentDownload__map-download-btn-icon"
+          data-nimg="1"
+          decoding="async"
+          height="19"
+          loading="lazy"
+          src="/icons/download-full-icon.svg"
+          style="color: transparent;"
+          width="19"
+        />
+      </button>
+    </p>
+    <div
+      class="TreatmentDownload__divider"
+    >
+      <lds-hr />
+    </div>
+  </div>
+  <div
+    class="container gutter"
+  >
+    <div
+      class="item"
+    >
+      <h2
+        class="heading"
+      >
+        Treatment Touch Points
+      </h2>
+      <p
+        class="details"
+      >
+        Throughout your treatment journey you’ll have regular touch points or visits with your health care provider. In the beginning of treatment these occur more frequently as you work to understand how effective the treatment is and set yourself up for success with ongoing treatment.
+      </p>
+    </div>
+    <div
+      class="item"
+    >
+      <h2
+        class="heading"
+      >
+        Recommended Dosing
+      </h2>
+      <p
+        class="details"
+      >
+        The recommended dosing shows a clear path for timing of doses, what kind of dose it is, and how much to take. For Kinsula your doses are in the form of infusions.
+      </p>
+    </div>
+  </div>
+  <div
+    class="background"
+  >
+    <div
+      class="customerSupportSignUpSection gutter"
+    >
+      <div
+        class="customerSupportSignUpSectionHeader"
+      >
+        Let us assist you on your journey. Sign up on this website to
+      </div>
+      <div
+        class="customerSupportSignUpSectionIconGroup"
+      >
+        <div
+          class="customerSupportSignUpSectionIcon"
+        >
+          <img
+            alt="CalendarIcon"
+            data-nimg="1"
+            decoding="async"
+            height="60"
+            loading="lazy"
+            src="/icons/circle-calendar-icon.svg"
+            style="color: transparent;"
+            width="60"
+          />
+          <div
+            class="customerSupportSignUpSectionText"
+          >
+            Personalize a calendar of your appointments
+          </div>
+        </div>
+        <div
+          class="customerSupportSignUpSectionIcon"
+        >
+          <img
+            alt="CarePartnersIcon"
+            data-nimg="1"
+            decoding="async"
+            height="60"
+            loading="lazy"
+            src="/icons/care-partners-icon.svg"
+            style="color: transparent;"
+            width="60"
+          />
+          <div
+            class="customerSupportSignUpSectionText"
+          >
+            Assign care partners to assist you along your journey
+          </div>
+        </div>
+        <div
+          class="customerSupportSignUpSectionIcon"
+        >
+          <img
+            alt="AppointmentRemindersIcon"
+            data-nimg="1"
+            decoding="async"
+            height="60"
+            loading="lazy"
+            src="/icons/appointment-reminders-icon.svg"
+            style="color: transparent;"
+            width="60"
+          />
+          <div
+            class="customerSupportSignUpSectionText"
+          >
+            Set up appointment reminders for you and your care partners
+          </div>
+        </div>
+      </div>
+      <button
+        class="lds-button primary"
+        data-testid="sign-up-button"
+        type="button"
+      >
+        Sign up now
+      </button>
+    </div>
+  </div>
+  <div
+    class="customerSupportSection gutter"
+  >
+    <div
+      class="customerSupportSectionLeft"
+    >
+      <div
+        class="customerSupportSectionLeftHeaderText"
+      >
+        Talk to a human
+      </div>
+      <div
+        class="customerSupportHorizontalRule"
+      >
+        <lds-hr />
+      </div>
+      <div
+        class="customerSupportSectionLeftSubheaderText"
+      >
+        If you have other questions about your medication, please contact us!
+      </div>
+    </div>
+    <div
+      class="customerSupportSectionRight"
+    >
+      <div
+        class="customerSupportSectionPhone"
+      >
+        <img
+          alt="PhoneIcon"
+          data-nimg="1"
+          decoding="async"
+          height="37"
+          loading="lazy"
+          src="/icons/phone-icon.svg"
+          style="color: transparent;"
+          width="35"
+        />
+        <div
+          class="customerSupportSectionPhoneText"
+        >
+          1-844-825-8966
+        </div>
+      </div>
+      <div
+        class="customerSupportSectionHours"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="35"
+          loading="lazy"
+          src="/icons/purple-hours-icon.svg"
+          style="color: transparent;"
+          width="35"
+        />
+        <div
+          class="customerSupportSectionHoursText"
+        >
+          Mon - Fri | 8:00 AM - 10:00 PM Eastern
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCarePartnerModal should render 1`] = `
+<div>
+  <div
+    class="primary modal"
+  >
+    <div
+      class="lds-modal open"
+      id="addCarePartnerModal"
+    >
+      <div
+        class="wrapper"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-12 col-md-9"
+          >
+            <div
+              aria-labelledby=""
+              aria-modal="true"
+              class="lds-modal-window"
+              role="dialog"
+            >
+              <div
+                class="lds-modal-body"
+              >
+                <div
+                  class="closeModalButtonWrapper"
+                >
+                  <button
+                    class="closeModalButton"
+                    type="button"
+                  >
+                    <svg
+                      aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                      class="lds-icon icon-X closeIcon"
+                      focusable="false"
+                      role="img"
+                    >
+                      <title
+                        id="lds-icon-X-title-123456789"
+                      >
+                        X
+                      </title>
+                      <desc
+                        id="lds-icon-X-description-123456789"
+                      />
+                      <svg
+                        viewBox="0 0 256 256"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                        />
+                      </svg>
+                    </svg>
+                  </button>
+                </div>
+                <h2
+                  class="modalTitle"
+                >
+                  Add care partner
+                </h2>
+                <form
+                  class="form"
+                >
+                  <div
+                    class="formContent"
+                  >
+                    <div>
+                      <label
+                        class="lds-form-label"
+                      >
+                        NAME
+                        <input
+                          aria-describedby=""
+                          class="lds-text-field"
+                          id="name"
+                          name="name"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </div>
+                    <div>
+                      <label
+                        class="lds-form-label"
+                      >
+                        EMAIL ADDRESS
+                        <input
+                          aria-describedby=""
+                          class="lds-text-field"
+                          id="emailAddress"
+                          name="emailAddress"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="add-care-partner-save-button"
+                      type="submit"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AddCarePartnerModal should render errors when save clicked with empty inputs 1`] = `
+<div>
+  <div
+    class="primary modal"
+  >
+    <div
+      class="lds-modal open"
+      id="addCarePartnerModal"
+    >
+      <div
+        class="wrapper"
+      >
+        <div
+          class="row justify-content-center"
+        >
+          <div
+            class="col-12 col-md-9"
+          >
+            <div
+              aria-labelledby=""
+              aria-modal="true"
+              class="lds-modal-window"
+              role="dialog"
+            >
+              <div
+                class="lds-modal-body"
+              >
+                <div
+                  class="closeModalButtonWrapper"
+                >
+                  <button
+                    class="closeModalButton"
+                    type="button"
+                  >
+                    <svg
+                      aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                      class="lds-icon icon-X closeIcon"
+                      focusable="false"
+                      role="img"
+                    >
+                      <title
+                        id="lds-icon-X-title-123456789"
+                      >
+                        X
+                      </title>
+                      <desc
+                        id="lds-icon-X-description-123456789"
+                      />
+                      <svg
+                        viewBox="0 0 256 256"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                        />
+                      </svg>
+                    </svg>
+                  </button>
+                </div>
+                <h2
+                  class="modalTitle"
+                >
+                  Add care partner
+                </h2>
+                <form
+                  class="form"
+                >
+                  <div
+                    class="formContent"
+                  >
+                    <div>
+                      <label
+                        class="lds-form-label"
+                      >
+                        NAME
+                        <input
+                          aria-describedby=""
+                          aria-invalid="true"
+                          class="lds-text-field error"
+                          id="name"
+                          name="name"
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                      <span
+                        class="lds-form-validation-error"
+                        id="errName"
+                      >
+                        <lds-icon
+                          decorative="true"
+                          inline="true"
+                          name="WarningCircleFill"
+                        />
+                         
+                        This field is required
+                      </span>
+                    </div>
+                    <div>
+                      <label
+                        class="lds-form-label"
+                      >
+                        EMAIL ADDRESS
+                        <input
+                          aria-describedby=""
+                          aria-invalid="true"
+                          class="lds-text-field error"
+                          id="emailAddress"
+                          name="emailAddress"
+                          type="text"
+                          value="mark"
+                        />
+                      </label>
+                      <span
+                        class="lds-form-validation-error"
+                        id="errEmailAddress"
+                      >
+                        <lds-icon
+                          decorative="true"
+                          inline="true"
+                          name="WarningCircleFill"
+                        />
+                         
+                        Invalid email address
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="add-care-partner-save-button"
+                      type="submit"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

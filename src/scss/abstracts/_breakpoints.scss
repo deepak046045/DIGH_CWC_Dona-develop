@@ -1,0 +1,18 @@
+// not used by LDS
+$breakpoint-xxl-min: 1441px;
+
+$breakpoint-xl-max: calc($breakpoint-xxl-min - 1px);
+$breakpoint-xl-min: 1200px;
+
+$breakpoint-l-max: calc($breakpoint-xl-min - 1px);
+$breakpoint-l-min: 992px;
+
+$breakpoint-m-max: calc($breakpoint-l-min) - 1px;
+$breakpoint-m-min: 768px;
+
+$breakpoint-s-max: calc($breakpoint-m-min) - 1px;
+$breakpoint-s-min: 576px;
+
+// not used by LDS
+$breakpoint-xs-max: calc($breakpoint-s-min) - 1px;
+$breakpoint-xs-min: 380px;

@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  ServiceKey:
+    Type: String
+
+  LoadBalancerDNSName:
+    Type: String
+
+  LoadBalancerCanonicalHostedZoneID:
+    Type: String
+
+Resources:
+  RecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !Ref LoadBalancerDNSName
+        EvaluateTargetHealth: false
+        HostedZoneId: !Ref LoadBalancerCanonicalHostedZoneID
+      HostedZoneId: !ImportValue dns:TopHostedZoneId
+      Name: !Sub
+        - ${ServiceKey}.${HostedZoneName}
+        - HostedZoneName:
+            Fn::ImportValue: dns:TopHostedZoneName
+      Type: A

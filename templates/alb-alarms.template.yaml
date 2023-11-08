@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation Template to create Cloudwatch Alarm for ALB Metric HTTPCode_ELB_5XX_Count'
+
+Parameters:
+  NeighborhoodKey:
+    Type: String
+    Description: The key by which to correlate stacks within the same neighborhood
+    AllowedPattern: '[a-zA-Z0-9\-]+'
+    MinLength: 1
+    MaxLength: 63
+
+  ServiceKey:
+    Type: String
+
+  LoadBalancerName:
+    Type: String
+
+  TargetGroupName:
+    Type: String
+
+Resources:
+  HTTPCodeELB5XXAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      ActionsEnabled: true
+      AlarmActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      AlarmDescription: !Sub '${NeighborhoodKey}-${ServiceKey}-ALB alarm for HTTPCode_ELB_5XX_Count'
+      AlarmName: !Sub '${NeighborhoodKey}-${ServiceKey}-5XX-COUNT-ALARM-${LoadBalancerName}'
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      EvaluationPeriods: 20
+      DatapointsToAlarm: 10
+      Period: 60
+      MetricName: 'HTTPCode_ELB_5XX_Count'
+      Namespace: 'AWS/ApplicationELB'
+      Dimensions:
+        - Name: LoadBalancer
+          Value: !Ref 'LoadBalancerName'
+      Statistic: 'Average'
+      Threshold: 50
+      TreatMissingData: 'notBreaching'
+
+  UnhealthyTargetGroupAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      ActionsEnabled: true
+      AlarmActions:
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:sns:OperationsSNSTopic
+      AlarmDescription: !Sub '${NeighborhoodKey}-${ServiceKey}-Alarm for Unhealthy Target Group'
+      AlarmName: !Sub '${NeighborhoodKey}-${ServiceKey}-UNHEALTHY-HOSTCOUNT-ALARM-${LoadBalancerName}'
+      ComparisonOperator: 'GreaterThanOrEqualToThreshold'
+      EvaluationPeriods: 20
+      MetricName: 'UnHealthyHostCount'
+      DatapointsToAlarm: 10
+      Namespace: 'AWS/ApplicationELB'
+      Dimensions:
+        - Name: TargetGroup
+          Value: !Ref 'TargetGroupName'
+        - Name: LoadBalancer
+          Value: !Ref 'LoadBalancerName'
+      Statistic: 'Average'
+      Period: 60
+      Threshold: 30
+      TreatMissingData: 'notBreaching'
+
+Outputs:
+  HTTPCodeELB5XXCountAlarmName:
+    Description: HTTPCodeELB5XXCount Alarm Name
+    Value: !Sub '${NeighborhoodKey}-${ServiceKey}-5XX-COUNT-ALARM-${LoadBalancerName}'
+
+  UnhealthyTargetGroupAlarmName:
+    Description: Unhealthy Target Group Alarm
+    Value: !Sub '${NeighborhoodKey}-${ServiceKey}-UNHEALTHY-HOSTCOUNT-ALARM-${LoadBalancerName}'

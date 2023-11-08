@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render desktop view 1`] = `
+<div>
+  <div
+    class="lds-sticky"
+    style="top: 0px; position: sticky; z-index: 100;"
+  >
+    <div
+      class="background"
+    >
+      <div
+        class="whiteBar gutter"
+      >
+        <img
+          alt="Kisunla Logo"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="98"
+          src="/images/kisunla-logo.svg"
+          style="color: transparent;"
+          width="297"
+        />
+        <div
+          class="buttons"
+        >
+          <button
+            class="lds-button secondary"
+            data-testid="sign-in-button"
+            type="button"
+          >
+            Sign in
+          </button>
+          <hr
+            class="MuiDivider-root MuiDivider-middle MuiDivider-vertical MuiDivider-flexItem buttonDivider css-16bghm4-MuiDivider-root"
+          />
+          <button
+            class="lds-button primary"
+            type="button"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+      <div
+        class="grayBar buttons"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium navigationButtonActive css-sghohy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Treatment map
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium navigationButton css-sghohy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          What to expect
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header Component window resizing should render mobile view 1`] = `
+<div>
+  <div
+    class="lds-sticky"
+    style="top: 0px; position: sticky; z-index: 100;"
+  >
+    <div
+      class="background"
+    >
+      <div
+        class="whiteBar"
+      >
+        <img
+          alt="Kisunla Logo"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="59"
+          src="/images/kisunla-logo.svg"
+          style="color: transparent;"
+          width="152"
+        />
+        <div
+          class="topRightControls"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+            data-testid="mobile-menu-button"
+            tabindex="0"
+            type="button"
+          >
+            <img
+              alt="MenuHamburgerIcon"
+              data-nimg="1"
+              decoding="async"
+              height="44"
+              loading="lazy"
+              src="/icons/menu-hamburger-icon.svg"
+              style="color: transparent;"
+              width="31"
+            />
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

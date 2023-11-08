@@ -1,0 +1,43 @@
+@import '@/scss/abstracts/mixins';
+
+.primary {
+  --lds-spacing-modal-margin-top-md: 15rem;
+  --lds-spacing-modal-margin-top-sm: 15rem;
+  --lds-radius-modal: 12px;
+  --lds-spacing-modal-body-padding-top: 2rem;
+  --lds-spacing-modal-body-padding-bottom: 2rem;
+  --lds-spacing-modal-body-padding-left: 1rem;
+  --lds-spacing-modal-body-padding-right: 1rem;
+  --lds-color-modal-foreground: #5b6770;
+  --lds-spacing-modal-body-padding-bottom: 48px;
+}
+
+.modalTitle {
+  font-size: 24px;
+  margin: 25px 0 16px 0;
+  text-align: center;
+}
+
+.modalContent {
+  font-size: 14px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+
+  @include ScreenSizeSmall(true) {
+    flex-direction: column;
+  }
+}
+.modalActions > :not(:first-of-type) {
+  margin-left: 32px;
+
+  @include ScreenSizeSmall(true) {
+    margin-left: 0;
+    order: -1;
+    margin-bottom: 40px;
+  }
+}

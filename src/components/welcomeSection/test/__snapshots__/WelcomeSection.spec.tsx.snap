@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeSection should render page when logged in 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <div
+      class="welcomeSection gutter"
+    >
+      <div
+        class="image_wrapper"
+      >
+        <img
+          alt="ElderlyGroupSmiling"
+          class="image"
+          src="/images/elderly-group-smiling.png"
+        />
+      </div>
+      <div
+        class="welcomeSectionRightSide"
+      >
+        <div
+          class="welcomeSectionHeaderText themeTypographyH1"
+        >
+          Hi Elizabeth, welcome to Kisunla support
+        </div>
+        <div
+          class="welcomeSectionSubHeaderText"
+        >
+          Support resources for your treatment journey. Set up your calendar of appointments, reminders, and care partners.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WelcomeSection should render the page when not logged in 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <div
+      class="welcomeSection gutter"
+    >
+      <div
+        class="image_wrapper"
+      >
+        <img
+          alt="ElderlyGroupSmiling"
+          class="image"
+          src="/images/elderly-group-smiling.png"
+        />
+      </div>
+      <div
+        class="welcomeSectionRightSide"
+      >
+        <div
+          class="welcomeSectionHeaderText themeTypographyH1"
+        >
+          Welcome to Kisunla support.
+        </div>
+        <div
+          class="welcomeSectionSubHeaderText"
+        >
+          Support resources for your treatment journey. Register to set up a
+      calendar of appointments, set up reminders, and assign care
+      partners.
+        </div>
+        <button
+          class="lds-button primary"
+          data-testid="sign-up-button"
+          type="button"
+        >
+          Sign up now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,79 @@
+@import '@/scss/abstracts/mixins';
+@import '@/scss/themes/colors';
+@import '@/scss/themes/typography.module';
+
+.background {
+  background-color: #{$theme-color-background-secondary};
+}
+
+.welcomeSection {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 24px;
+  @include ScreenSizeSmall(true) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.welcomeSectionRightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+
+  @include ScreenSizeLarge(true) {
+    padding: 0;
+  }
+
+  @include ScreenSizeMedium(true) {
+    padding: 20px 15px;
+  }
+}
+
+.welcomeSectionHeaderText {
+  color: $theme-color-darker-gray;
+}
+
+.welcomeSectionSubHeaderText {
+  color: $theme-color-darker-gray;
+
+  @extend .themeTypographyBody;
+
+  @include ScreenSizeSmall(true) {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+}
+
+.image_wrapper {
+  height: 424px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  @include ScreenSizeXL(true) {
+    height: 402px;
+  }
+  @include ScreenSizeLarge(true) {
+    height: 345px;
+  }
+  @include ScreenSizeMedium(true) {
+    height: 360px;
+  }
+  @include ScreenSize(0px, 815px, true) {
+    height: 392px;
+  }
+  @include ScreenSizeSmall(true) {
+    width: 100%;
+    height: auto;
+  }
+}
+.image {
+  width: auto;
+  height: 100%;
+  @include ScreenSizeSmall(true) {
+    width: 100%;
+    height: auto;
+  }
+}

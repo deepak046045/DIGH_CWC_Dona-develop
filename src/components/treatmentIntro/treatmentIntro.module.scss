@@ -1,0 +1,61 @@
+@import '@/scss/abstracts/mixins';
+@import '@/scss/themes/typography.module';
+@import '@/scss/themes/colors';
+@import '@/scss/themes/buttons.module';
+
+.TreatmentIntro {
+  width: 100%;
+  padding: 32px 48px 16px;
+  color: $theme-color-darker-gray;
+  @include ScreenSizeMedium(true) {
+    padding: 1rem 1.5rem 1.25rem;
+  }
+  &__title {
+    @extend .themeTypographyTitle;
+    position: relative;
+    margin-bottom: 2.5rem;
+    &::after {
+      content: '';
+      width: 5rem;
+      height: 0.125rem;
+      bottom: -1rem;
+      left: 0;
+      position: absolute;
+      background-color: #ff8500;
+    }
+  }
+  &__subtitle {
+    @extend .themeTypographyH3;
+    margin-bottom: 4rem;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    @include ScreenSizeSmall(true) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    @extend .themeTypographySmallText;
+    margin: 0;
+    padding: 0 10px 0 0;
+    @include ScreenSizeSmall(true) {
+      padding: 0;
+    }
+  }
+  &__appointment-btn {
+    @extend .primary;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 1;
+    text-align: center;
+    text-wrap: nowrap;
+    @include ScreenSizeSmall(true) {
+      height: 40px;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+  }
+}

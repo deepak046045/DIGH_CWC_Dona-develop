@@ -1,0 +1,207 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  ExternalCertificateArn:
+    Type: String
+
+  NeighborhoodKey:
+    Type: String
+
+  ServiceKey:
+    Type: String
+
+  SecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+
+  HealthCheckPath:
+    Type: String
+
+  HealthCheckStatusCodes:
+    Type: String
+
+  InternalCertificateExpirationDate:
+    Type: String
+
+  SigningCertificate:
+    Type: String
+
+  KMSKeyId:
+    Type: String
+
+  OrganizationID:
+    Type: String
+
+  HttpToHttpsRedirect:
+    Type: String
+
+  TypeTag:
+    Type: String
+
+  EnvTag:
+    Type: String
+
+  HealthCheckTimeoutSeconds:
+    Type: Number
+
+  HealthyThresholdCount:
+    Type: Number
+
+  UnhealthyThresholdCount:
+    Type: Number
+
+  DeregistrationDelayTimeoutSeconds:
+    Type: Number
+
+  SslPolicy:
+    Type: String
+
+Conditions:
+  HttpToHttpsRedirect: !Equals [!Ref HttpToHttpsRedirect, 'true']
+
+Resources:
+  CreateServiceCertificate:
+    Type: AWS::CloudFormation::CustomResource
+    Properties:
+      ServiceToken: !ImportValue shared:cfn-cert-lambda:ServiceCertificateLambdaArn
+      BucketName: !ImportValue shared:s3:CertificateBucket
+      CertificateExpirationDate: !Ref InternalCertificateExpirationDate
+      CommonName: !Sub
+        - ${ServiceKey}.${HostedZoneName}
+        - HostedZoneName:
+            Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:dns:HostedZoneName
+      KeyObjectKey: !Sub ${NeighborhoodKey}/${ServiceKey}/service-key.pem
+      CertObjectKey: !Sub ${NeighborhoodKey}/${ServiceKey}/service-cert.pem
+      RootKey:
+        ObjectKey:
+          Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:certificates:${SigningCertificate}:KeyObjectKey
+        VersionId:
+          Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:certificates:${SigningCertificate}:KeyVersionId
+      RootCert:
+        ObjectKey:
+          Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:certificates:${SigningCertificate}:CertObjectKey
+        VersionId:
+          Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:certificates:${SigningCertificate}:CertVersionId
+
+  SSMServiceCertificate:
+    Type: AWS::CloudFormation::CustomResource
+    Properties:
+      ServiceToken: !ImportValue shared:cfn-cert-lambda:PushParameterLambdaArn
+      BucketName: !ImportValue shared:s3:CertificateBucket
+      ObjectKey: !Sub ${NeighborhoodKey}/${ServiceKey}/service-cert.pem
+      VersionId: !GetAtt CreateServiceCertificate.CertificateVersionId
+      ParameterName: !Sub /${NeighborhoodKey}/${ServiceKey}/SERVER_CERTIFICATE
+      KeyId: !Ref KMSKeyId
+
+  SSMServiceKey:
+    Type: AWS::CloudFormation::CustomResource
+    Properties:
+      ServiceToken: !ImportValue shared:cfn-cert-lambda:PushParameterLambdaArn
+      BucketName: !ImportValue shared:s3:CertificateBucket
+      ObjectKey: !Sub ${NeighborhoodKey}/${ServiceKey}/service-key.pem
+      VersionId: !GetAtt CreateServiceCertificate.KeyVersionId
+      ParameterName: !Sub /${NeighborhoodKey}/${ServiceKey}/SERVER_KEY
+      KeyId: !Ref KMSKeyId
+
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: '60'
+        - Key: access_logs.s3.enabled
+          Value: 'true'
+        - Key: access_logs.s3.bucket
+          Value: !Sub lillydh-load-balancer-access-logs-${AWS::Region}
+        - Key: access_logs.s3.prefix
+          Value: !Ref OrganizationID
+      SecurityGroups:
+        - !Ref SecurityGroupId
+      Subnets: !Split
+        - ','
+        - Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:network:PublicSubnets
+      Tags:
+        - Key: role
+          Value: internet-facing
+        - Key: Env
+          Value: !Ref EnvTag
+        - Key: Type
+          Value: !Ref TypeTag
+
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ExternalCertificateArn
+      SslPolicy: !Ref SslPolicy
+
+  ListenerHTTP:
+    Type: 'AWS::ElasticLoadBalancingV2::Listener'
+    Condition: HttpToHttpsRedirect
+    Properties:
+      DefaultActions:
+        - RedirectConfig:
+            Host: '#{host}'
+            Path: '/#{path}'
+            Port: '443'
+            Protocol: HTTPS
+            StatusCode: HTTP_302
+          Type: redirect
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 80
+      Protocol: HTTP
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    DependsOn: LoadBalancer
+    Properties:
+      HealthCheckIntervalSeconds: 30
+      HealthCheckPath: !Ref HealthCheckPath
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: !Ref HealthCheckTimeoutSeconds
+      HealthyThresholdCount: !Ref HealthyThresholdCount
+      UnhealthyThresholdCount: !Ref UnhealthyThresholdCount
+      Port: 80
+      Protocol: HTTP
+      TargetType: ip
+      Matcher:
+        HttpCode: !Ref HealthCheckStatusCodes
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: !Ref DeregistrationDelayTimeoutSeconds
+      VpcId:
+        Fn::ImportValue: !Sub ${NeighborhoodKey}:shared:network:VpcId
+
+  CloudwatchALB:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: alb-alarms.template.yaml
+      Parameters:
+        NeighborhoodKey: !Ref NeighborhoodKey
+        ServiceKey: !Ref ServiceKey
+        LoadBalancerName: !GetAtt LoadBalancer.LoadBalancerFullName
+        TargetGroupName: !GetAtt TargetGroup.TargetGroupFullName
+
+Outputs:
+  LoadBalancerFullName:
+    Value: !GetAtt LoadBalancer.LoadBalancerFullName
+
+  DNSName:
+    Value: !GetAtt LoadBalancer.DNSName
+
+  CanonicalHostedZoneID:
+    Value: !GetAtt LoadBalancer.CanonicalHostedZoneID
+
+  LoadBalancerListenerArn:
+    Value: !Ref LoadBalancerListener
+
+  TargetGroup:
+    Value: !Ref TargetGroup
+
+  TargetGroupFullName:
+    Value: !GetAtt TargetGroup.TargetGroupFullName

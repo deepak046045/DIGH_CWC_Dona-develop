@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreatmentIntro should render page when logged in 1`] = `
+<div>
+  <div
+    class="TreatmentIntro gutter"
+  >
+    <h2
+      class="TreatmentIntro__title"
+    >
+      My treatment plan
+    </h2>
+    <p
+      class="TreatmentIntro__subtitle"
+    >
+      Setting you up for success in your treatment. Setting you up for success in your treatment.
+    </p>
+    <div
+      class="TreatmentIntro__wrapper"
+    >
+      <p
+        class="TreatmentIntro__text"
+      >
+        This treatment map serves as a suggested guide. Always follow your doctor’s directions. Insurance approval may be needed or the start of your infusion therapy may be delayed.
+      </p>
+      <button
+        class="lds-button TreatmentIntro__appointment-btn"
+        data-testid="add-appointment-button"
+        type="button"
+      >
+        Add Appointment
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TreatmentIntro should render the page when not logged in 1`] = `
+<div>
+  <div
+    class="TreatmentIntro gutter"
+  >
+    <h2
+      class="TreatmentIntro__title"
+    >
+      Recommended treatment
+    </h2>
+    <p
+      class="TreatmentIntro__subtitle"
+    >
+      Setting you up for success in your treatment. Setting you up for success in your treatment.
+    </p>
+    <div
+      class="TreatmentIntro__wrapper"
+    >
+      <p
+        class="TreatmentIntro__text"
+      >
+        This treatment map serves as a suggested guide. Always follow your doctor’s directions. Insurance approval may be needed or the start of your infusion therapy may be delayed.
+      </p>
+    </div>
+  </div>
+</div>
+`;

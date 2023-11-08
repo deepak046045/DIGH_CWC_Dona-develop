@@ -1,0 +1,49 @@
+@import '@/scss/abstracts/breakpoints';
+
+@mixin ScreenSize($min, $max, $andSmaller: false) {
+  @if $andSmaller {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin ScreenSizeXXL($andSmaller: false) {
+  @include ScreenSize($breakpoint-xxl-min, 100000px, $andSmaller) {
+    @content;
+  }
+}
+
+@mixin ScreenSizeXL($andSmaller: false) {
+  @include ScreenSize($breakpoint-xl-min, $breakpoint-xl-max, $andSmaller) {
+    @content;
+  }
+}
+
+@mixin ScreenSizeLarge($andSmaller: false) {
+  @include ScreenSize($breakpoint-l-min, $breakpoint-l-max, $andSmaller) {
+    @content;
+  }
+}
+
+@mixin ScreenSizeMedium($andSmaller: false) {
+  @include ScreenSize($breakpoint-m-min, $breakpoint-m-max, $andSmaller) {
+    @content;
+  }
+}
+
+@mixin ScreenSizeSmall($andSmaller: false) {
+  @include ScreenSize($breakpoint-s-min, $breakpoint-s-max, $andSmaller) {
+    @content;
+  }
+}
+
+@mixin ScreenSizeXS($andSmaller: false) {
+  @include ScreenSize($breakpoint-xs-min, $breakpoint-xs-max, $andSmaller) {
+    @content;
+  }
+}

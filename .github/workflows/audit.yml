@@ -1,0 +1,13 @@
+name: NPM Audit
+
+on:
+  schedule:
+    - cron: '0 1 * * 1' # at 1am, every Monday
+  workflow_dispatch: # allow manual trigger from GitHub repo website
+
+jobs:
+  build-and-audit:
+    uses: EliLillyCo/DIGH_SHARED_ACTIONS/.github/workflows/docker_npm_audit.yaml@main
+    secrets: inherit
+    with:
+      service-name: digh-cwc-dona

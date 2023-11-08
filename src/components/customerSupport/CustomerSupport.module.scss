@@ -1,0 +1,184 @@
+@import '@/scss/themes/colors';
+@import '@/scss/abstracts/mixins';
+
+.background {
+  background-color: #{$theme-color-background-secondary};
+}
+
+.customerSupportSignUpSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include ScreenSizeXXL(true) {
+    padding: 60px 0 40px 0;
+  }
+
+  @include ScreenSizeXL(true) {
+    padding: 60px 60px 40px 60px;
+  }
+
+  @include ScreenSizeSmall(true) {
+    padding: 32px 16px 32px 16px;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.customerSupportSignUpSectionHeader {
+  color: $theme-color-darker-gray;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  padding-bottom: 35px;
+
+  @include ScreenSizeSmall(true) {
+    font-size: 24px;
+  }
+}
+
+.customerSupportSignUpSectionIconGroup {
+  display: flex;
+  gap: 48px;
+  padding-bottom: 14px;
+
+  @include ScreenSizeSmall(true) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.customerSupportSignUpSectionIcon {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customerSupportSignUpSectionText {
+  color: $theme-color-darker-gray;
+  text-align: center;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  @include ScreenSizeXXL(true) {
+    max-width: 288px;
+  }
+
+  @include ScreenSizeSmall(true) {
+    max-width: none;
+  }
+}
+
+.customerSupportSection {
+  display: flex;
+  gap: 32px;
+
+  @include ScreenSizeXXL(true) {
+    padding: 56px 48px 56px 48px;
+  }
+
+  @include ScreenSizeSmall(true) {
+    padding: 32px 16px 32px 16px;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.customerSupportSectionRight {
+  min-width: 325px;
+  flex: 1;
+
+  @include ScreenSizeSmall(true) {
+    min-width: 0px;
+  }
+}
+
+.customerSupportSectionLeftHeaderText {
+  color: $theme-color-darker-gray;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  padding-bottom: 10px;
+
+  @include ScreenSizeSmall(true) {
+    font-size: 24px;
+    padding-bottom: 6px;
+  }
+}
+
+.customerSupportSectionLeftSubheaderText {
+  color: $theme-color-darker-gray;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 16px;
+}
+
+.customerSupportHorizontalRule {
+  --lds-color-hr-border-top: #ff8500;
+  --lds-border-hr-top-width: 2.4px;
+  --lds-color-hr-opacity: 1;
+  width: 62px;
+}
+
+.customerSupportSectionPhone,
+.customerSupportSectionHours {
+  display: flex;
+  padding: 14px 24px 14px 24px;
+  gap: 21px;
+  flex: 1;
+}
+
+.customerSupportSectionPhone {
+  border-radius: 10px 10px 0px 0px;
+  background: rgba(255, 192, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.customerSupportSectionHours {
+  border-radius: 0px 0px 10px 10px;
+  background: rgba(255, 192, 0, 0.25);
+  display: flex;
+  align-items: center;
+}
+
+.customerSupportSectionPhoneText,
+.customerSupportSectionHoursText {
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 40px;
+}
+
+.customerSupportSectionPhoneText {
+  font-weight: 800;
+
+  @include ScreenSizeSmall(true) {
+    color: #502361;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration-line: underline;
+  }
+}
+
+.customerSupportSectionHoursText {
+  font-weight: 500;
+
+  @include ScreenSizeSmall(true) {
+    font-size: 18px;
+  }
+}

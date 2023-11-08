@@ -1,0 +1,2294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyAppointments No Appointments should render message when no appointments 1`] = `
+<div>
+  <div
+    class="primary"
+  />
+  <div
+    class="gutter"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="headerText"
+      >
+        My appointments
+      </div>
+      <div
+        class="subHeaderText"
+      >
+        Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+      </div>
+      <div
+        class="headerButtonAndSwitch"
+      >
+        <button
+          class="lds-button primary addAppointmentButton"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            aria-labelledby="lds-icon-Plus-title-123456789 lds-icon-Plus-description-123456789"
+            class="lds-icon icon-Plus inline button-icon before"
+            focusable="false"
+            role="img"
+          >
+            <title
+              id="lds-icon-Plus-title-123456789"
+            >
+              Plus
+            </title>
+            <desc
+              id="lds-icon-Plus-description-123456789"
+            />
+            <svg
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+              />
+            </svg>
+          </svg>
+          <span
+            class="lds-button-icon-spacer"
+          >
+             
+          </span>
+          New appointment
+        </button>
+        <div
+          class="lds-switch lds-form-field"
+        >
+          <label
+            class="lds-switch-label"
+            for="viewAllAppointmentsSwitch"
+          >
+            View all
+            <input
+              aria-checked="false"
+              aria-labelledby="viewAllAppointmentsSwitch"
+              class="lds-switch-input"
+              classes="viewAllAppointmentsSwitch"
+              data-testid="view-all-switch"
+              id="viewAllAppointmentsSwitch"
+              name="viewAllAppointmentsSwitch"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="lds-switch-toggle "
+            >
+              <span
+                class="lds-switch-toggle-positive add-margin-right"
+              >
+                On
+              </span>
+              <span
+                class="lds-switch-toggle-knob"
+              />
+              <span
+                class="lds-switch-toggle-negative"
+              >
+                 
+                Off
+                 
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileHeader"
+    >
+      My appointments
+    </div>
+    <div
+      class="appointmentGrid"
+    >
+      <div
+        class="date gridHeaderCell"
+      >
+        <img
+          alt="CalendarIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Date
+      </div>
+      <div
+        class="time gridHeaderCell"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/white-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Time
+      </div>
+      <div
+        class="address gridHeaderCell"
+      >
+        <img
+          alt="AddressIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Address
+      </div>
+      <div
+        class="type gridHeaderCell"
+      >
+        Type of appointment
+      </div>
+      <div
+        class="carePartner gridHeaderCell"
+      >
+        <img
+          alt="HeartIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Care partner(s)
+      </div>
+      <div
+        class="actions gridHeaderCell"
+      >
+        Actions
+      </div>
+    </div>
+    <div
+      class="noAppointments"
+    >
+      No appointments saved.
+       
+      <a
+        aria-label="Add New Appointments"
+        class="lds-link"
+      >
+        Add New Appointments
+      </a>
+       
+      to get started.
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmationModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Are you sure you want to delete this appointment?
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    This cannot be undone.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MyAppointments No Appointments should render message when no upcoming appointments but some past appointments 1`] = `
+<div>
+  <div
+    class="primary"
+  />
+  <div
+    class="gutter"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="headerText"
+      >
+        My appointments
+      </div>
+      <div
+        class="subHeaderText"
+      >
+        Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+      </div>
+      <div
+        class="headerButtonAndSwitch"
+      >
+        <button
+          class="lds-button primary addAppointmentButton"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            aria-labelledby="lds-icon-Plus-title-123456789 lds-icon-Plus-description-123456789"
+            class="lds-icon icon-Plus inline button-icon before"
+            focusable="false"
+            role="img"
+          >
+            <title
+              id="lds-icon-Plus-title-123456789"
+            >
+              Plus
+            </title>
+            <desc
+              id="lds-icon-Plus-description-123456789"
+            />
+            <svg
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+              />
+            </svg>
+          </svg>
+          <span
+            class="lds-button-icon-spacer"
+          >
+             
+          </span>
+          New appointment
+        </button>
+        <div
+          class="lds-switch lds-form-field"
+        >
+          <label
+            class="lds-switch-label"
+            for="viewAllAppointmentsSwitch"
+          >
+            View all
+            <input
+              aria-checked="false"
+              aria-labelledby="viewAllAppointmentsSwitch"
+              class="lds-switch-input"
+              classes="viewAllAppointmentsSwitch"
+              data-testid="view-all-switch"
+              id="viewAllAppointmentsSwitch"
+              name="viewAllAppointmentsSwitch"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="lds-switch-toggle "
+            >
+              <span
+                class="lds-switch-toggle-positive add-margin-right"
+              >
+                On
+              </span>
+              <span
+                class="lds-switch-toggle-knob"
+              />
+              <span
+                class="lds-switch-toggle-negative"
+              >
+                 
+                Off
+                 
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileHeader"
+    >
+      My appointments
+    </div>
+    <div
+      class="appointmentGrid"
+    >
+      <div
+        class="date gridHeaderCell"
+      >
+        <img
+          alt="CalendarIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Date
+      </div>
+      <div
+        class="time gridHeaderCell"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/white-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Time
+      </div>
+      <div
+        class="address gridHeaderCell"
+      >
+        <img
+          alt="AddressIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Address
+      </div>
+      <div
+        class="type gridHeaderCell"
+      >
+        Type of appointment
+      </div>
+      <div
+        class="carePartner gridHeaderCell"
+      >
+        <img
+          alt="HeartIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Care partner(s)
+      </div>
+      <div
+        class="actions gridHeaderCell"
+      >
+        Actions
+      </div>
+    </div>
+    <div
+      class="noAppointments"
+    >
+      You have no upcoming appointments.
+       
+      <a
+        aria-label="Add new appointments"
+        class="lds-link"
+      >
+        Add new appointments
+      </a>
+       
+      or
+       
+      <a
+        aria-label="view all Appointments"
+        class="lds-link"
+        data-testid="view-all-link"
+      >
+        view all Appointments
+      </a>
+      .
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmationModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Are you sure you want to delete this appointment?
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    This cannot be undone.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MyAppointments View all switch should render all appointments when on and only upcoming appointments when off 1`] = `
+<div>
+  <div
+    class="primary"
+  />
+  <div
+    class="gutter"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="headerText"
+      >
+        My appointments
+      </div>
+      <div
+        class="subHeaderText"
+      >
+        Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+      </div>
+      <div
+        class="headerButtonAndSwitch"
+      >
+        <button
+          class="lds-button primary addAppointmentButton"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            aria-labelledby="lds-icon-Plus-title-123456789 lds-icon-Plus-description-123456789"
+            class="lds-icon icon-Plus inline button-icon before"
+            focusable="false"
+            role="img"
+          >
+            <title
+              id="lds-icon-Plus-title-123456789"
+            >
+              Plus
+            </title>
+            <desc
+              id="lds-icon-Plus-description-123456789"
+            />
+            <svg
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+              />
+            </svg>
+          </svg>
+          <span
+            class="lds-button-icon-spacer"
+          >
+             
+          </span>
+          New appointment
+        </button>
+        <div
+          class="lds-switch lds-form-field"
+        >
+          <label
+            class="lds-switch-label"
+            for="viewAllAppointmentsSwitch"
+          >
+            View all
+            <input
+              aria-checked="true"
+              aria-labelledby="viewAllAppointmentsSwitch"
+              class="lds-switch-input"
+              classes="viewAllAppointmentsSwitch"
+              data-testid="view-all-switch"
+              id="viewAllAppointmentsSwitch"
+              name="viewAllAppointmentsSwitch"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="lds-switch-toggle "
+            >
+              <span
+                class="lds-switch-toggle-positive add-margin-right"
+              >
+                On
+              </span>
+              <span
+                class="lds-switch-toggle-knob"
+              />
+              <span
+                class="lds-switch-toggle-negative"
+              >
+                 
+                Off
+                 
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileHeader"
+    >
+      My appointments
+    </div>
+    <div
+      class="appointmentGrid"
+    >
+      <div
+        class="date gridHeaderCell"
+      >
+        <img
+          alt="CalendarIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Date
+      </div>
+      <div
+        class="time gridHeaderCell"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/white-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Time
+      </div>
+      <div
+        class="address gridHeaderCell"
+      >
+        <img
+          alt="AddressIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Address
+      </div>
+      <div
+        class="type gridHeaderCell"
+      >
+        Type of appointment
+      </div>
+      <div
+        class="carePartner gridHeaderCell"
+      >
+        <img
+          alt="HeartIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Care partner(s)
+      </div>
+      <div
+        class="actions gridHeaderCell"
+      >
+        Actions
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        September 10, 2021
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        11:30am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street,Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street,Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street,Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          src=""
+          style="color: transparent;"
+          width="49"
+        />
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </div>
+      <div />
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        April 21, 2060
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        10:30am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street, Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street, Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street, Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          src=""
+          style="color: transparent;"
+          width="49"
+        />
+         2
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        , 
+      </div>
+      <div
+        class="actions gridCell"
+      >
+        <div
+          class="appointmentsHorizontalRule"
+        >
+          <lds-hr />
+        </div>
+        <div
+          class="actionButtons"
+        >
+          <div
+            class="actionButtonEdit"
+          >
+            <img
+              alt="EditAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/edit-pencil-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            Edit
+          </div>
+          <button
+            class="actionButtonDelete"
+            data-testid="delete-appointment-button"
+            type="button"
+          >
+            <img
+              alt="DeleteAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/delete-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <div
+              class="buttonLabel"
+            >
+              Delete
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmationModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Are you sure you want to delete this appointment?
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    This cannot be undone.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MyAppointments View all switch should render all appointments when view all link clicked 1`] = `
+<div>
+  <div
+    class="primary"
+  />
+  <div
+    class="gutter"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="headerText"
+      >
+        My appointments
+      </div>
+      <div
+        class="subHeaderText"
+      >
+        Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+      </div>
+      <div
+        class="headerButtonAndSwitch"
+      >
+        <button
+          class="lds-button primary addAppointmentButton"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            aria-labelledby="lds-icon-Plus-title-123456789 lds-icon-Plus-description-123456789"
+            class="lds-icon icon-Plus inline button-icon before"
+            focusable="false"
+            role="img"
+          >
+            <title
+              id="lds-icon-Plus-title-123456789"
+            >
+              Plus
+            </title>
+            <desc
+              id="lds-icon-Plus-description-123456789"
+            />
+            <svg
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+              />
+            </svg>
+          </svg>
+          <span
+            class="lds-button-icon-spacer"
+          >
+             
+          </span>
+          New appointment
+        </button>
+        <div
+          class="lds-switch lds-form-field"
+        >
+          <label
+            class="lds-switch-label"
+            for="viewAllAppointmentsSwitch"
+          >
+            View all
+            <input
+              aria-checked="true"
+              aria-labelledby="viewAllAppointmentsSwitch"
+              class="lds-switch-input"
+              classes="viewAllAppointmentsSwitch"
+              data-testid="view-all-switch"
+              id="viewAllAppointmentsSwitch"
+              name="viewAllAppointmentsSwitch"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="lds-switch-toggle "
+            >
+              <span
+                class="lds-switch-toggle-positive add-margin-right"
+              >
+                On
+              </span>
+              <span
+                class="lds-switch-toggle-knob"
+              />
+              <span
+                class="lds-switch-toggle-negative"
+              >
+                 
+                Off
+                 
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileHeader"
+    >
+      My appointments
+    </div>
+    <div
+      class="appointmentGrid"
+    >
+      <div
+        class="date gridHeaderCell"
+      >
+        <img
+          alt="CalendarIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Date
+      </div>
+      <div
+        class="time gridHeaderCell"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/white-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Time
+      </div>
+      <div
+        class="address gridHeaderCell"
+      >
+        <img
+          alt="AddressIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Address
+      </div>
+      <div
+        class="type gridHeaderCell"
+      >
+        Type of appointment
+      </div>
+      <div
+        class="carePartner gridHeaderCell"
+      >
+        <img
+          alt="HeartIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Care partner(s)
+      </div>
+      <div
+        class="actions gridHeaderCell"
+      >
+        Actions
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        September 10, 2023
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        11:30am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street,Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street,Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street,Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          src=""
+          style="color: transparent;"
+          width="49"
+        />
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </div>
+      <div />
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmationModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Are you sure you want to delete this appointment?
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    This cannot be undone.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MyAppointments should render page when logged in 1`] = `
+<div>
+  <div
+    class="primary"
+  />
+  <div
+    class="gutter"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="headerText"
+      >
+        My appointments
+      </div>
+      <div
+        class="subHeaderText"
+      >
+        Appointment reminders will be sent to you and your care partners 5 days and 1 day before your scheduled appointment.
+      </div>
+      <div
+        class="headerButtonAndSwitch"
+      >
+        <button
+          class="lds-button primary addAppointmentButton"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            aria-labelledby="lds-icon-Plus-title-123456789 lds-icon-Plus-description-123456789"
+            class="lds-icon icon-Plus inline button-icon before"
+            focusable="false"
+            role="img"
+          >
+            <title
+              id="lds-icon-Plus-title-123456789"
+            >
+              Plus
+            </title>
+            <desc
+              id="lds-icon-Plus-description-123456789"
+            />
+            <svg
+              viewBox="0 0 256 256"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+              />
+            </svg>
+          </svg>
+          <span
+            class="lds-button-icon-spacer"
+          >
+             
+          </span>
+          New appointment
+        </button>
+        <div
+          class="lds-switch lds-form-field"
+        >
+          <label
+            class="lds-switch-label"
+            for="viewAllAppointmentsSwitch"
+          >
+            View all
+            <input
+              aria-checked="false"
+              aria-labelledby="viewAllAppointmentsSwitch"
+              class="lds-switch-input"
+              classes="viewAllAppointmentsSwitch"
+              data-testid="view-all-switch"
+              id="viewAllAppointmentsSwitch"
+              name="viewAllAppointmentsSwitch"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="lds-switch-toggle "
+            >
+              <span
+                class="lds-switch-toggle-positive add-margin-right"
+              >
+                On
+              </span>
+              <span
+                class="lds-switch-toggle-knob"
+              />
+              <span
+                class="lds-switch-toggle-negative"
+              >
+                 
+                Off
+                 
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mobileHeader"
+    >
+      My appointments
+    </div>
+    <div
+      class="appointmentGrid"
+    >
+      <div
+        class="date gridHeaderCell"
+      >
+        <img
+          alt="CalendarIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Date
+      </div>
+      <div
+        class="time gridHeaderCell"
+      >
+        <img
+          alt="HoursIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/white-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Time
+      </div>
+      <div
+        class="address gridHeaderCell"
+      >
+        <img
+          alt="AddressIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Address
+      </div>
+      <div
+        class="type gridHeaderCell"
+      >
+        Type of appointment
+      </div>
+      <div
+        class="carePartner gridHeaderCell"
+      >
+        <img
+          alt="HeartIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Care partner(s)
+      </div>
+      <div
+        class="actions gridHeaderCell"
+      >
+        Actions
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        November 15, 2023
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        06:30pm
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street, Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street, Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street, Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          loading="lazy"
+          src="/icons/iv-infusion-icon.svg"
+          style="color: transparent;"
+          width="49"
+        />
+        IV infusion Dose
+         2
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Henry, Charlotte
+      </div>
+      <div
+        class="actions gridCell"
+      >
+        <div
+          class="appointmentsHorizontalRule"
+        >
+          <lds-hr />
+        </div>
+        <div
+          class="actionButtons"
+        >
+          <div
+            class="actionButtonEdit"
+          >
+            <img
+              alt="EditAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/edit-pencil-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            Edit
+          </div>
+          <button
+            class="actionButtonDelete"
+            data-testid="delete-appointment-button"
+            type="button"
+          >
+            <img
+              alt="DeleteAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/delete-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <div
+              class="buttonLabel"
+            >
+              Delete
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        March 30, 2024
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        07:00am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street,Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street,Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street,Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          loading="lazy"
+          src="/icons/neurologist-icon.svg"
+          style="color: transparent;"
+          width="49"
+        />
+        Neurologist Check-in
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Henry, Charlotte
+      </div>
+      <div
+        class="actions gridCell"
+      >
+        <div
+          class="appointmentsHorizontalRule"
+        >
+          <lds-hr />
+        </div>
+        <div
+          class="actionButtons"
+        >
+          <div
+            class="actionButtonEdit"
+          >
+            <img
+              alt="EditAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/edit-pencil-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            Edit
+          </div>
+          <button
+            class="actionButtonDelete"
+            data-testid="delete-appointment-button"
+            type="button"
+          >
+            <img
+              alt="DeleteAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/delete-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <div
+              class="buttonLabel"
+            >
+              Delete
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        May 15, 2024
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        05:00am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street,Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street,Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street,Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          loading="lazy"
+          src="/icons/safety-mri-icon.svg"
+          style="color: transparent;"
+          width="49"
+        />
+        Safety MRI
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Henry, Charlotte, Brian, Cousin Mary
+      </div>
+      <div
+        class="actions gridCell"
+      >
+        <div
+          class="appointmentsHorizontalRule"
+        >
+          <lds-hr />
+        </div>
+        <div
+          class="actionButtons"
+        >
+          <div
+            class="actionButtonEdit"
+          >
+            <img
+              alt="EditAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/edit-pencil-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            Edit
+          </div>
+          <button
+            class="actionButtonDelete"
+            data-testid="delete-appointment-button"
+            type="button"
+          >
+            <img
+              alt="DeleteAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/delete-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <div
+              class="buttonLabel"
+            >
+              Delete
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="date gridCell"
+        data-testid="appointment-row"
+      >
+        <img
+          alt="CalendarIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-calendar-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        June 12, 2024
+      </div>
+      <div
+        class="time gridCell"
+      >
+        <img
+          alt="HoursIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-hours-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        09:00am
+      </div>
+      <div
+        class="address gridCell"
+      >
+        <img
+          alt="AddressIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-address-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        <a
+          aria-label="11700 N. Meridian Street,Carmel, IN 46032 (opens in a new tab)"
+          class="lds-link"
+          href="http://maps.google.com/?q=11700 N. Meridian Street,Carmel, IN 46032"
+          target="_blank"
+        >
+          11700 N. Meridian Street,Carmel, IN 46032
+        </a>
+      </div>
+      <div
+        class="type gridCell"
+      >
+        <img
+          alt="AppointmentTypeIcon"
+          data-nimg="1"
+          decoding="async"
+          height="48"
+          loading="lazy"
+          src="/icons/iv-infusion-icon.svg"
+          style="color: transparent;"
+          width="49"
+        />
+        IV infusion Dose
+         3
+      </div>
+      <div
+        class="carePartner gridCell"
+      >
+        <img
+          alt="HeartIcon"
+          class="mobileRowIcon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/icons/gray-heart-icon.svg"
+          style="color: transparent;"
+          width="24"
+        />
+        Henry, Charlotte
+      </div>
+      <div
+        class="actions gridCell"
+      >
+        <div
+          class="appointmentsHorizontalRule"
+        >
+          <lds-hr />
+        </div>
+        <div
+          class="actionButtons"
+        >
+          <div
+            class="actionButtonEdit"
+          >
+            <img
+              alt="EditAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/edit-pencil-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            Edit
+          </div>
+          <button
+            class="actionButtonDelete"
+            data-testid="delete-appointment-button"
+            type="button"
+          >
+            <img
+              alt="DeleteAppointmentIcon"
+              data-nimg="1"
+              decoding="async"
+              height="24"
+              loading="lazy"
+              src="/icons/delete-icon.svg"
+              style="color: transparent;"
+              width="24"
+            />
+            <div
+              class="buttonLabel"
+            >
+              Delete
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="primary"
+    >
+      <div
+        class="lds-modal"
+        id="confirmationModal"
+      >
+        <div
+          class="wrapper"
+        >
+          <div
+            class="row justify-content-center"
+          >
+            <div
+              class="col-12 col-md-9"
+            >
+              <div
+                aria-labelledby=""
+                aria-modal="true"
+                class="lds-modal-window"
+                role="dialog"
+              >
+                <button
+                  aria-label="close modal"
+                  class="lds-button-clear-style lds-modal-close-btn focus icon"
+                  type="button"
+                >
+                  <span
+                    class="lds-button-icon-spacer"
+                  >
+                     
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    aria-labelledby="lds-icon-X-title-123456789 lds-icon-X-description-123456789"
+                    class="lds-icon icon-X inline button-icon"
+                    focusable="false"
+                    role="img"
+                  >
+                    <title
+                      id="lds-icon-X-title-123456789"
+                    >
+                      X
+                    </title>
+                    <desc
+                      id="lds-icon-X-description-123456789"
+                    />
+                    <svg
+                      viewBox="0 0 256 256"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                      />
+                    </svg>
+                  </svg>
+                </button>
+                <div
+                  class="lds-modal-body"
+                >
+                  <h2
+                    class="modalTitle"
+                  >
+                    Are you sure you want to delete this appointment?
+                  </h2>
+                  <p
+                    class="modalContent"
+                  >
+                    This cannot be undone.
+                  </p>
+                  <div
+                    class="modalActions"
+                  >
+                    <button
+                      class="lds-button secondary"
+                      data-testid="cancel-btn"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="lds-button primary"
+                      data-testid="yes-btn"
+                      type="button"
+                    >
+                      Yes, delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,38 @@
+Version: '0.1'
+Parameters:
+  /shared/NODE_ENV:
+    description: |
+      Environment string the node app should run under.
+    required: true
+    schema:
+      type: string
+  /digh-cwc-dona/NEXTAUTH_URL:
+    description: |
+      URL needed for Next Auth.
+    required: true
+    schema:
+      type: string
+  /digh-cwc-dona/OPENID_CLIENT_ID:
+    description: |
+      Client ID for the Application.
+    required: false
+    schema:
+      type: string
+  /digh-cwc-dona/OPENID_CLIENT_SECRET:
+    description: |
+      Client Secret for the Application.
+    required: false
+    schema:
+      type: string
+  /digh-cwc-dona/OPENID_TENANT_ID:
+    description: |
+      Tenant ID for the Application.
+    required: false
+    schema:
+      type: string
+  /digh-cwc-dona/NEXTAUTH_SECRET:
+    description: |
+      Random 32 characters string used in Next Auth.
+    required: true
+    schema:
+      type: string

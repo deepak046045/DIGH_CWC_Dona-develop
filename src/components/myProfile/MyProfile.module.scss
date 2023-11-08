@@ -1,0 +1,96 @@
+@import '@/scss/themes/colors';
+@import '@/scss/abstracts/mixins';
+
+.container {
+  display: grid;
+  place-items: center;
+
+  @include ScreenSizeSmall(true) {
+    place-items: unset;
+  }
+}
+.title {
+  color: $theme-color-darker-gray;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  text-align: center;
+  margin: 40px 0 25px 0;
+}
+.mainContainer {
+  width: 500px;
+  margin-bottom: 50px;
+
+  @include ScreenSizeSmall(true) {
+    width: auto;
+  }
+}
+.profileIconContainer {
+  border-radius: 12px 12px 0px 0px;
+  background: rgba(255, 192, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 20px 15px 20px 15px;
+
+  @include ScreenSizeSmall(true) {
+    border-radius: 0px;
+  }
+}
+.profileIconDescription {
+  color: #212121;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  display: inline;
+  margin-left: 15px;
+}
+.detailsContainer {
+  padding: 0 15px 0 15px;
+}
+.detailsHeader {
+  color: #212121;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 10px 0 10px 0;
+}
+.detailsValue {
+  color: $theme-color-darker-gray;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 5px 0 5px 0;
+}
+.deleteContainer {
+  padding: 40px 10px 10px 10px;
+  font-family: Roboto;
+  font-style: normal;
+}
+.deleteIconButton {
+  color: $theme-color-primary;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration-line: underline;
+  background: none;
+  border: none;
+  margin-bottom: 10px;
+}
+.deleteButtonLink {
+  padding-left: 3px;
+  display: inline;
+}
+.deleteDescription {
+  color: #000;
+  padding-left: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

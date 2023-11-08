@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreatmentInfo should render page 1`] = `
+<div>
+  <div
+    class="container gutter"
+  >
+    <div
+      class="item"
+    >
+      <h2
+        class="heading"
+      >
+        Treatment Touch Points
+      </h2>
+      <p
+        class="details"
+      >
+        Throughout your treatment journey you’ll have regular touch points or visits with your health care provider. In the beginning of treatment these occur more frequently as you work to understand how effective the treatment is and set yourself up for success with ongoing treatment.
+      </p>
+    </div>
+    <div
+      class="item"
+    >
+      <h2
+        class="heading"
+      >
+        Recommended Dosing
+      </h2>
+      <p
+        class="details"
+      >
+        The recommended dosing shows a clear path for timing of doses, what kind of dose it is, and how much to take. For Kinsula your doses are in the form of infusions.
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+@import '../../scss/themes/typography.module';
+@import '../../scss/themes/colors';
+
+.label {
+  display: block;
+  @extend .themeTypographyLabel;
+  margin: 1px 0 4px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.hint {
+  @extend .themeTypographyBodySmall;
+  font-style: italic;
+  color: $theme-color-dark-gray;
+  margin: 0 0 4px;
+}

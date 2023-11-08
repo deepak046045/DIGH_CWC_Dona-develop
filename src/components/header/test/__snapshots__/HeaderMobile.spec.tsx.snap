@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Mobile Component should render header mobile 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <div
+      class="whiteBar"
+    >
+      <img
+        alt="Kisunla Logo"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="59"
+        src="/images/kisunla-logo.svg"
+        style="color: transparent;"
+        width="152"
+      />
+      <div
+        class="topRightControls"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          data-testid="mobile-menu-button"
+          tabindex="0"
+          type="button"
+        >
+          <img
+            alt="MenuHamburgerIcon"
+            data-nimg="1"
+            decoding="async"
+            height="44"
+            loading="lazy"
+            src="/icons/menu-hamburger-icon.svg"
+            style="color: transparent;"
+            width="31"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
